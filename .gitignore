@@ -1,0 +1,5 @@
+*.prg
+*.debug
+KozlinaWatch.prg.debug.xml
+developer_key
+KozlinaWatch.iq

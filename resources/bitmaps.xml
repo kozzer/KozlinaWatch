@@ -1,0 +1,19 @@
+<resources>
+
+    <bitmap id="BluetoothIcon" filename="drawables/bluetooth_blue.png">
+        <palette>
+            <color>2546E9</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="LauncherIcon" filename="drawables/kozzer_icon_36x36.png">
+        <palette disableTransparency="true">
+            <color>00005E</color>
+            <color>0087FF</color>
+            <color>0044B0</color>
+            <color>005ACA</color>            
+            <color>001E82</color>
+        </palette>
+    </bitmap>
+
+</resources>
