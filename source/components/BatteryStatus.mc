@@ -51,7 +51,7 @@ class BatteryStatus {
         setBatteryDisplayLevelColor(dc, perc);
         
         // Draw filled (only fill based on %)
-        var dispPerc = (((_batteryWidth - 4) * perc) / 100);
+        var dispPerc = ((_batteryWidth * perc) / 100);
         if (dispPerc > _batteryWidth - 4) {
             dispPerc = _batteryWidth - 4;
         }
