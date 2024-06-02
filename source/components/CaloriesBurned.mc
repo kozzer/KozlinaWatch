@@ -20,7 +20,7 @@ class CaloriesBurned {
         _tinyFont     = CommonMethods.getTinyFont(dc);
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
-        _calsX = dc.getWidth() / 2;
+        _calsX = 2 * (dc.getWidth() / 3);
         _calsY = _screenHeight - 90;
 
         _calsPoints = [
@@ -33,7 +33,10 @@ class CaloriesBurned {
 
     function drawOnScreen(dc, info)
     {
-        var caloriesBurned = info.calories + " cals";
+
+        CommonMethods.drawLabelAndRecangle(dc, _calsX, _calsY, "cals");
+
+        var caloriesBurned = info.calories.toString();
 
         CommonMethods.setDrawingClip(dc, _calsPoints);
 

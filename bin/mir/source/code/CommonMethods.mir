@@ -313,6 +313,115 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72
         ret %tmp.118;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_stop:
     }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 77; ]
+    function drawLabelAndRecangle(dc, x, y, label) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_57_94_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 79 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_57_94_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_57_94_4_stop" ]
+        %rectanglePoints.1 = local;
+        %tmp.1 = newa 4;
+        %tmp.2 = newa 2;
+        %tmp.4 = lgetv %x;
+        %tmp.5 = 60;
+        %tmp.6 = sub %tmp.4 %tmp.5;
+        %tmp.7 = dup %tmp.2;
+        %tmp.8 = aputv %tmp.7 0 %tmp.6;
+        %tmp.10 = lgetv %y;
+        %tmp.11 = 2;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 1 %tmp.12;
+        %tmp.15 = dup %tmp.1;
+        %tmp.16 = aputv %tmp.15 0 %tmp.14;
+        %tmp.17 = newa 2;
+        %tmp.19 = lgetv %x;
+        %tmp.20 = 60;
+        %tmp.21 = add %tmp.19 %tmp.20;
+        %tmp.22 = dup %tmp.17;
+        %tmp.23 = aputv %tmp.22 0 %tmp.21;
+        %tmp.25 = lgetv %y;
+        %tmp.26 = 2;
+        %tmp.27 = add %tmp.25 %tmp.26;
+        %tmp.28 = dup %tmp.23;
+        %tmp.29 = aputv %tmp.28 1 %tmp.27;
+        %tmp.30 = dup %tmp.16;
+        %tmp.31 = aputv %tmp.30 1 %tmp.29;
+        %tmp.32 = newa 2;
+        %tmp.34 = lgetv %x;
+        %tmp.35 = 60;
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = dup %tmp.32;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.40 = lgetv %y;
+        %tmp.41 = 70;
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.43 = dup %tmp.38;
+        %tmp.44 = aputv %tmp.43 1 %tmp.42;
+        %tmp.45 = dup %tmp.31;
+        %tmp.46 = aputv %tmp.45 2 %tmp.44;
+        %tmp.47 = newa 2;
+        %tmp.49 = lgetv %x;
+        %tmp.50 = 60;
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        %tmp.52 = dup %tmp.47;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        %tmp.55 = lgetv %y;
+        %tmp.56 = 70;
+        %tmp.57 = add %tmp.55 %tmp.56;
+        %tmp.58 = dup %tmp.53;
+        %tmp.59 = aputv %tmp.58 1 %tmp.57;
+        %tmp.60 = dup %tmp.46;
+        %tmp.61 = aputv %tmp.60 3 %tmp.59;
+        lputv %rectanglePoints.1 %tmp.61;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 86 8 ]
+        %tmp.63 = getv ? :CommonMethods;
+        %tmp.64 = getv function %tmp.63 :setDrawingClip;
+        %tmp.66 = lgetv %dc;
+        %tmp.68 = lgetv %rectanglePoints.1;
+        invoke %tmp.63 %tmp.64(%tmp.66, %tmp.68);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 88 8 ]
+        %tmp.69 = getm $.ThemeController;
+        %tmp.70 = getv function %tmp.69 :setColor;
+        %tmp.72 = lgetv %dc;
+        %tmp.73 = getm $.ThemeController;
+        %tmp.74 = getv %tmp.73 :RECT_COLOR;
+        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.74);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 89 8 ]
+        %tmp.75 = lgetv %dc;
+        %tmp.76 = getv function %tmp.75 :fillRoundedRectangle;
+        %tmp.78 = lgetv %x;
+        %tmp.79 = 60;
+        %tmp.80 = sub %tmp.78 %tmp.79;
+        %tmp.82 = lgetv %y;
+        %tmp.83 = 120;
+        %tmp.84 = 40;
+        %tmp.85 = 4;
+        invoke %tmp.75 %tmp.76(%tmp.80, %tmp.82, %tmp.83, %tmp.84, %tmp.85);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 90 8 ]
+        %tmp.86 = lgetv %dc;
+        %tmp.87 = getv function %tmp.86 :drawText;
+        %tmp.89 = lgetv %x;
+        %tmp.91 = lgetv %y;
+        %tmp.92 = 36;
+        %tmp.93 = add %tmp.91 %tmp.92;
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :FONT_XTINY;
+        %tmp.97 = lgetv %label;
+        %tmp.98 = getm $.Toybox.Graphics;
+        %tmp.99 = getv %tmp.98 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.86 %tmp.87(%tmp.89, %tmp.93, %tmp.95, %tmp.97, %tmp.99);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 92 8 ]
+        %tmp.100 = getm $.ThemeController;
+        %tmp.101 = getv function %tmp.100 :resetColors;
+        %tmp.103 = lgetv %dc;
+        invoke %tmp.100 %tmp.101(%tmp.103);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 93 8 ]
+        %tmp.105 = getv ? :CommonMethods;
+        %tmp.106 = getv function %tmp.105 :clearDrawingClip;
+        %tmp.108 = lgetv %dc;
+        invoke %tmp.105 %tmp.106(%tmp.108);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_57_94_4_stop:
+    }
 }
 [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 1; ]
 <init> {
