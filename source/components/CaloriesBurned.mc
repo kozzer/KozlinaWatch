@@ -20,13 +20,13 @@ class CaloriesBurned {
         _tinyFont     = CommonMethods.getTinyFont(dc);
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
-        _calsX = dc.getWidth() - 14;
-        _calsY = _screenHeight - 48;
+        _calsX = (dc.getWidth() / 2) + 24;
+        _calsY = (_screenHeight / 2) + (_fontHeight * 2);
         _calsPoints = [
-                        [_calsX - 100, _calsY],
                         [_calsX, _calsY],
-                        [_calsX, _calsY + _fontHeight],
-                        [_calsX - 100, _calsY + _fontHeight]
+                        [_calsX + 100, _calsY],
+                        [_calsX + 100, _calsY + _fontHeight],
+                        [_calsX, _calsY + _fontHeight]
                      ];
     }
 
@@ -36,7 +36,7 @@ class CaloriesBurned {
 
         CommonMethods.setDrawingClip(dc, _calsPoints);
 
-        dc.drawText(_calsX, _calsY, _tinyFont, caloriesBurned, Graphics.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(_calsX, _calsY, _tinyFont, caloriesBurned, Graphics.TEXT_JUSTIFY_LEFT);
 
         CommonMethods.clearDrawingClip(dc);
 

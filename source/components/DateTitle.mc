@@ -21,10 +21,10 @@ class DateTitle {
         var dateHeight = Graphics.getFontHeight(_dateFont) + 1;
 
         _datePoints = [
-                        [_dateX - 50, _dateY],
-                        [_dateX + 50, _dateY],
-                        [_dateX + 50, _dateY + dateHeight],
-                        [_dateX - 50, _dateY + dateHeight]
+                        [_dateX - 75, _dateY],
+                        [_dateX + 75, _dateY],
+                        [_dateX + 75, _dateY + dateHeight],
+                        [_dateX - 75, _dateY + dateHeight]
                     ];
     }
 

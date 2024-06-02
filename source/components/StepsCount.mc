@@ -6,6 +6,7 @@ using ThemeController as Theme;
 
 class StepsCount {
 
+    private var _screenWidth;
     private var _screenHeight;
     private var _tinyFont;
     private var _fontHeight;
@@ -16,17 +17,18 @@ class StepsCount {
     private var _stepsPoints;
 
     function initialize(dc) {
+        _screenWidth  = dc.getWidth();
         _screenHeight = dc.getHeight();
         _tinyFont     = CommonMethods.getTinyFont(dc);
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
-        _stepsX = 12;
-        _stepsY = _screenHeight - 48;
+        _stepsX = (_screenWidth / 2) - 12;
+        _stepsY = (_screenHeight / 2) + (_fontHeight * 2);
         _stepsPoints = [
+                        [_stepsX - 200, _stepsY],
                         [_stepsX, _stepsY],
-                        [_stepsX + 100, _stepsY],
-                        [_stepsX + 100, _stepsY + _fontHeight],
-                        [_stepsX, _stepsY + _fontHeight]
+                        [_stepsX, _stepsY + _fontHeight],
+                        [_stepsX - 200, _stepsY + _fontHeight]
                      ];
     }
 
@@ -39,7 +41,7 @@ class StepsCount {
 
         CommonMethods.setDrawingClip(dc, _stepsPoints);
 
-        dc.drawText(_stepsX, _stepsY, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(_stepsX, _stepsY, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_RIGHT);
 
         CommonMethods.clearDrawingClip(dc);
 

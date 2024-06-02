@@ -1,5 +1,6 @@
 using Toybox.Application;
 using Toybox.Graphics;
+using Toybox.Lang;
 
 using ThemeController as Theme;
 
@@ -73,4 +74,4 @@ module CommonMethods {
         return [min, max];
     }
 
-}
+  }

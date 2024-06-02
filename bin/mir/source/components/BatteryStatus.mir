@@ -1,0 +1,305 @@
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 1; ]
+using Toybox.System;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 3; ]
+using Toybox.Graphics as :Graphics;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 5; ]
+using ThemeController as :Theme;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 7; ]
+class BatteryStatus{
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 10; @position = 18; ]
+    private
+    const _batteryWidth = 32;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 11; @position = 18; ]
+    private
+    const _batteryHeight = 16;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 12; @position = 18; ]
+    private
+    const _batteryRadius = 3;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 15; @position = 16; ]
+    private
+    var _batteryX;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 16; @position = 16; ]
+    private
+    var _batteryY;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 18; @position = 16; ]
+    private
+    var batteryPoints;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 19; @position = 16; ]
+    private
+    var _batXAdj;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 21; ]
+    function initialize(dc) as Void {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_21_27_34_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 23 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        putv self :_batteryX %tmp.5;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 24 8 ]
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 24;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        putv self :_batteryY %tmp.10;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 26 8 ]
+        %tmp.12 = getv ? :_batteryWidth;
+        %tmp.13 = 2;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        putv self :_batXAdj %tmp.14;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 28 8 ]
+        %tmp.15 = newa 4;
+        %tmp.16 = newa 2;
+        %tmp.18 = getv ? :_batteryX;
+        %tmp.20 = getv ? :_batXAdj;
+        %tmp.21 = sub %tmp.18 %tmp.20;
+        %tmp.22 = dup %tmp.16;
+        %tmp.23 = aputv %tmp.22 0 %tmp.21;
+        %tmp.25 = getv ? :_batteryY;
+        %tmp.26 = dup %tmp.23;
+        %tmp.27 = aputv %tmp.26 1 %tmp.25;
+        %tmp.28 = dup %tmp.15;
+        %tmp.29 = aputv %tmp.28 0 %tmp.27;
+        %tmp.30 = newa 2;
+        %tmp.32 = getv ? :_batteryX;
+        %tmp.34 = getv ? :_batXAdj;
+        %tmp.35 = add %tmp.32 %tmp.34;
+        %tmp.36 = 2;
+        %tmp.37 = add %tmp.35 %tmp.36;
+        %tmp.38 = dup %tmp.30;
+        %tmp.39 = aputv %tmp.38 0 %tmp.37;
+        %tmp.41 = getv ? :_batteryY;
+        %tmp.42 = dup %tmp.39;
+        %tmp.43 = aputv %tmp.42 1 %tmp.41;
+        %tmp.44 = dup %tmp.29;
+        %tmp.45 = aputv %tmp.44 1 %tmp.43;
+        %tmp.46 = newa 2;
+        %tmp.48 = getv ? :_batteryX;
+        %tmp.50 = getv ? :_batXAdj;
+        %tmp.51 = add %tmp.48 %tmp.50;
+        %tmp.52 = 2;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.54 = dup %tmp.46;
+        %tmp.55 = aputv %tmp.54 0 %tmp.53;
+        %tmp.57 = getv ? :_batteryY;
+        %tmp.59 = getv ? :_batteryHeight;
+        %tmp.60 = add %tmp.57 %tmp.59;
+        %tmp.61 = dup %tmp.55;
+        %tmp.62 = aputv %tmp.61 1 %tmp.60;
+        %tmp.63 = dup %tmp.45;
+        %tmp.64 = aputv %tmp.63 2 %tmp.62;
+        %tmp.65 = newa 2;
+        %tmp.67 = getv ? :_batteryX;
+        %tmp.69 = getv ? :_batXAdj;
+        %tmp.70 = sub %tmp.67 %tmp.69;
+        %tmp.71 = dup %tmp.65;
+        %tmp.72 = aputv %tmp.71 0 %tmp.70;
+        %tmp.74 = getv ? :_batteryY;
+        %tmp.76 = getv ? :_batteryHeight;
+        %tmp.77 = add %tmp.74 %tmp.76;
+        %tmp.78 = dup %tmp.72;
+        %tmp.79 = aputv %tmp.78 1 %tmp.77;
+        %tmp.80 = dup %tmp.64;
+        %tmp.81 = aputv %tmp.80 3 %tmp.79;
+        putv self :batteryPoints %tmp.81;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_21_27_34_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 37; ]
+    function drawOnScreen(dc) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 40 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_stop" ]
+        %perc.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :battery;
+        lputv %perc.1 %tmp.4;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 43 8 ]
+        %tmp.5 = getm $.ThemeController;
+        %tmp.6 = getv function %tmp.5 :resetColors;
+        %tmp.8 = lgetv %dc;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 45 8 ]
+        %tmp.10 = getv ? :CommonMethods;
+        %tmp.11 = getv function %tmp.10 :setDrawingClip;
+        %tmp.13 = lgetv %dc;
+        %tmp.15 = getv ? :batteryPoints;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 48 8 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :drawRoundedRectangle;
+        %tmp.19 = getv ? :_batteryX;
+        %tmp.21 = getv ? :_batXAdj;
+        %tmp.22 = sub %tmp.19 %tmp.21;
+        %tmp.24 = getv ? :_batteryY;
+        %tmp.26 = getv ? :_batteryWidth;
+        %tmp.28 = getv ? :_batteryHeight;
+        %tmp.30 = getv ? :_batteryRadius;
+        invoke %tmp.16 %tmp.17(%tmp.22, %tmp.24, %tmp.26, %tmp.28, %tmp.30);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 51 8 ]
+        %tmp.31 = lgetv %dc;
+        %tmp.32 = getv function %tmp.31 :fillRectangle;
+        %tmp.34 = getv ? :_batteryX;
+        %tmp.36 = getv ? :_batXAdj;
+        %tmp.37 = sub %tmp.34 %tmp.36;
+        %tmp.39 = getv ? :_batteryWidth;
+        %tmp.40 = add %tmp.37 %tmp.39;
+        %tmp.42 = getv ? :_batteryY;
+        %tmp.44 = getv ? :_batteryHeight;
+        %tmp.45 = 4;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        %tmp.47 = add %tmp.42 %tmp.46;
+        %tmp.49 = getv ? :_batteryHeight;
+        %tmp.50 = 6;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        %tmp.53 = getv ? :_batteryHeight;
+        %tmp.54 = 2;
+        %tmp.55 = div %tmp.53 %tmp.54;
+        invoke %tmp.31 %tmp.32(%tmp.40, %tmp.47, %tmp.51, %tmp.55);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 54 8 ]
+        %tmp.56 = self;
+        %tmp.57 = getv function %tmp.56 :setBatteryDisplayLevelColor;
+        %tmp.59 = lgetv %dc;
+        %tmp.61 = lgetv %perc.1;
+        invoke %tmp.56 %tmp.57(%tmp.59, %tmp.61);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 57 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_stop" ]
+        %dispPerc.2 = local;
+        %tmp.63 = getv ? :_batteryWidth;
+        %tmp.65 = lgetv %perc.1;
+        %tmp.66 = mul %tmp.63 %tmp.65;
+        %tmp.67 = 100;
+        %tmp.68 = div %tmp.66 %tmp.67;
+        lputv %dispPerc.2 %tmp.68;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 58 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_8_60_8_if_stmt:
+        %tmp.70 = lgetv %dispPerc.2;
+        %tmp.72 = getv ? :_batteryWidth;
+        %tmp.73 = 4;
+        %tmp.74 = sub %tmp.72 %tmp.73;
+        %tmp.75 = gt %tmp.70 %tmp.74;
+        bf %tmp.75 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_8_60_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_8_60_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_42_60_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 59 12 ]
+        %tmp.77 = getv ? :_batteryWidth;
+        %tmp.78 = 4;
+        %tmp.79 = sub %tmp.77 %tmp.78;
+        lputv %dispPerc.2 %tmp.79;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_42_60_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_8_60_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_58_8_60_8_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 62 8 ]
+        %tmp.80 = lgetv %dc;
+        %tmp.81 = getv function %tmp.80 :fillRoundedRectangle;
+        %tmp.83 = getv ? :_batteryX;
+        %tmp.85 = getv ? :_batXAdj;
+        %tmp.86 = sub %tmp.83 %tmp.85;
+        %tmp.87 = 2;
+        %tmp.88 = add %tmp.86 %tmp.87;
+        %tmp.90 = getv ? :_batteryY;
+        %tmp.91 = 2;
+        %tmp.92 = add %tmp.90 %tmp.91;
+        %tmp.94 = lgetv %dispPerc.2;
+        %tmp.96 = getv ? :_batteryHeight;
+        %tmp.97 = 4;
+        %tmp.98 = sub %tmp.96 %tmp.97;
+        %tmp.100 = getv ? :_batteryRadius;
+        %tmp.101 = 1;
+        %tmp.102 = sub %tmp.100 %tmp.101;
+        invoke %tmp.80 %tmp.81(%tmp.88, %tmp.92, %tmp.94, %tmp.98, %tmp.102);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 64 8 ]
+        %tmp.104 = getv ? :CommonMethods;
+        %tmp.105 = getv function %tmp.104 :clearDrawingClip;
+        %tmp.107 = lgetv %dc;
+        invoke %tmp.104 %tmp.105(%tmp.107);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_37_30_65_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 67; ]
+    private
+    function setBatteryDisplayLevelColor(dc, perc) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_67_58_77_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 68 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_stmt:
+        %tmp.2 = lgetv %perc;
+        %tmp.3 = 40;
+        %tmp.4 = gt %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_23_70_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 69 12 ]
+        %tmp.5 = getm $.ThemeController;
+        %tmp.6 = getv function %tmp.5 :setColor;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = getm $.ThemeController;
+        %tmp.10 = getv %tmp.9 :FULL_COLOR;
+        invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_23_70_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 70 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_stmt:
+        %tmp.12 = lgetv %perc;
+        %tmp.13 = 30;
+        %tmp.14 = gt %tmp.12 %tmp.13;
+        bf %tmp.14 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_30_72_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 71 12 ]
+        %tmp.15 = getm $.ThemeController;
+        %tmp.16 = getv function %tmp.15 :setColor;
+        %tmp.18 = lgetv %dc;
+        %tmp.19 = getm $.ThemeController;
+        %tmp.20 = getv %tmp.19 :MOST_COLOR;
+        invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_30_72_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 72 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_stmt:
+        %tmp.22 = lgetv %perc;
+        %tmp.23 = 20;
+        %tmp.24 = gt %tmp.22 %tmp.23;
+        bf %tmp.24 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_30_74_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 73 12 ]
+        %tmp.25 = getm $.ThemeController;
+        %tmp.26 = getv function %tmp.25 :setColor;
+        %tmp.28 = lgetv %dc;
+        %tmp.29 = getm $.ThemeController;
+        %tmp.30 = getv %tmp.29 :SOME_COLOR;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_30_74_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_false:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_74_15_76_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 75 12 ]
+        %tmp.31 = getm $.ThemeController;
+        %tmp.32 = getv function %tmp.31 :setColor;
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getm $.ThemeController;
+        %tmp.36 = getv %tmp.35 :LOW_COLOR;
+        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_74_15_76_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_72_15_76_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_70_15_76_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_68_8_76_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_67_58_77_4_stop:
+    }
+}
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc"; @line = 1; ]
+<init> {
+}

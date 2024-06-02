@@ -1,0 +1,172 @@
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 1; ]
+using Toybox.System;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 3; ]
+using Toybox.Graphics as :Graphics;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 4; ]
+using Toybox.Time;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 5; ]
+using Toybox.Time.Gregorian;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 7; ]
+using ThemeController as :Theme;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 9; ]
+class DateTitle{
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 9; ]
+    <init> {
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 11 18 ]
+        %tmp.1 = getm $.Toybox.Graphics;
+        %tmp.2 = getv %tmp.1 :FONT_LARGE;
+        putv self :_dateFont %tmp.2;
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 11; @position = 18; ]
+    private
+    const _dateFont;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 12; @position = 16; ]
+    private
+    var _dateX;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 13; @position = 16; ]
+    private
+    var _dateY;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 15; @position = 16; ]
+    private
+    var _datePoints;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 17; ]
+    function initialize(dc) as Void {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_17_28_29_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 18 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        putv self :_dateX %tmp.5;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 19 8 ]
+        %tmp.6 = 14;
+        putv self :_dateY %tmp.6;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 21 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_17_28_29_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_17_28_29_4_stop" ]
+        %dateHeight.1 = local;
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv function %tmp.7 :getFontHeight;
+        %tmp.10 = getv ? :_dateFont;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        %tmp.12 = 1;
+        %tmp.13 = add %tmp.11 %tmp.12;
+        lputv %dateHeight.1 %tmp.13;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 23 8 ]
+        %tmp.14 = newa 4;
+        %tmp.15 = newa 2;
+        %tmp.17 = getv ? :_dateX;
+        %tmp.18 = 75;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        %tmp.20 = dup %tmp.15;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.23 = getv ? :_dateY;
+        %tmp.24 = dup %tmp.21;
+        %tmp.25 = aputv %tmp.24 1 %tmp.23;
+        %tmp.26 = dup %tmp.14;
+        %tmp.27 = aputv %tmp.26 0 %tmp.25;
+        %tmp.28 = newa 2;
+        %tmp.30 = getv ? :_dateX;
+        %tmp.31 = 75;
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = dup %tmp.28;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        %tmp.36 = getv ? :_dateY;
+        %tmp.37 = dup %tmp.34;
+        %tmp.38 = aputv %tmp.37 1 %tmp.36;
+        %tmp.39 = dup %tmp.27;
+        %tmp.40 = aputv %tmp.39 1 %tmp.38;
+        %tmp.41 = newa 2;
+        %tmp.43 = getv ? :_dateX;
+        %tmp.44 = 75;
+        %tmp.45 = add %tmp.43 %tmp.44;
+        %tmp.46 = dup %tmp.41;
+        %tmp.47 = aputv %tmp.46 0 %tmp.45;
+        %tmp.49 = getv ? :_dateY;
+        %tmp.51 = lgetv %dateHeight.1;
+        %tmp.52 = add %tmp.49 %tmp.51;
+        %tmp.53 = dup %tmp.47;
+        %tmp.54 = aputv %tmp.53 1 %tmp.52;
+        %tmp.55 = dup %tmp.40;
+        %tmp.56 = aputv %tmp.55 2 %tmp.54;
+        %tmp.57 = newa 2;
+        %tmp.59 = getv ? :_dateX;
+        %tmp.60 = 75;
+        %tmp.61 = sub %tmp.59 %tmp.60;
+        %tmp.62 = dup %tmp.57;
+        %tmp.63 = aputv %tmp.62 0 %tmp.61;
+        %tmp.65 = getv ? :_dateY;
+        %tmp.67 = lgetv %dateHeight.1;
+        %tmp.68 = add %tmp.65 %tmp.67;
+        %tmp.69 = dup %tmp.63;
+        %tmp.70 = aputv %tmp.69 1 %tmp.68;
+        %tmp.71 = dup %tmp.56;
+        %tmp.72 = aputv %tmp.71 3 %tmp.70;
+        putv self :_datePoints %tmp.72;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_17_28_29_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 32; ]
+    function drawOnScreen(dc) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 33 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_stop" ]
+        %greg.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.3 = getm $.Toybox.Time;
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getm $.Toybox.Time;
+        %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %greg.1 %tmp.8;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 34 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_stop" ]
+        %dateStr.2 = local;
+        %tmp.10 = getv ? :Lang;
+        %tmp.11 = getv function %tmp.10 :format;
+        %tmp.12 = "$1$ $2$";
+        %tmp.13 = newa 2;
+        %tmp.14 = lgetv %greg.1;
+        %tmp.15 = getv %tmp.14 :month;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 0 %tmp.15;
+        %tmp.18 = lgetv %greg.1;
+        %tmp.19 = getv %tmp.18 :day;
+        %tmp.20 = dup %tmp.17;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.22 = invoke %tmp.10 %tmp.11(%tmp.12, %tmp.21);
+        lputv %dateStr.2 %tmp.22;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 36 8 ]
+        %tmp.24 = getv ? :CommonMethods;
+        %tmp.25 = getv function %tmp.24 :setDrawingClip;
+        %tmp.27 = lgetv %dc;
+        %tmp.29 = getv ? :_datePoints;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 38 8 ]
+        %tmp.30 = lgetv %dc;
+        %tmp.31 = getv function %tmp.30 :drawText;
+        %tmp.33 = getv ? :_dateX;
+        %tmp.35 = getv ? :_dateY;
+        %tmp.37 = getv ? :_dateFont;
+        %tmp.39 = lgetv %dateStr.2;
+        %tmp.40 = getm $.Toybox.Graphics;
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35, %tmp.37, %tmp.39, %tmp.41);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc" 40 8 ]
+        %tmp.43 = getv ? :CommonMethods;
+        %tmp.44 = getv function %tmp.43 :clearDrawingClip;
+        %tmp.46 = lgetv %dc;
+        invoke %tmp.43 %tmp.44(%tmp.46);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DateTitle_mc_32_30_41_4_stop:
+    }
+}
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DateTitle.mc"; @line = 1; ]
+<init> {
+}

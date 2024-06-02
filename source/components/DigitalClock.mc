@@ -19,7 +19,7 @@ class DigitalClock {
         _timeFont = Application.loadResource( Rez.Fonts.lemon_milk );
 
         _timeX = (dc.getWidth() / 2) - 12;
-        _timeY = (dc.getHeight() / 2) - 48;
+        _timeY = (dc.getHeight() / 2) - 64;
 
         _timeHeight = Graphics.getFontHeight(_timeFont) + 1;
         _timePoints = [
@@ -59,7 +59,7 @@ class DigitalClock {
         dc.drawText(_timeX, _timeY, _timeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         var ampmX = _timeX + 84;
-        var ampmY = _timeY + (_timeHeight * 0.55);
+        var ampmY = _timeY + (_timeHeight * 0.5);
         var ampmPoints = [ [ampmX, ampmY], [ampmX, ampmY + 100], [ampmX + 100, ampmY + 100], [ampmX + 100, ampmY] ];
 
         CommonMethods.setDrawingClip(dc, ampmPoints);
