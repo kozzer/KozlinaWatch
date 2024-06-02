@@ -23,12 +23,12 @@ class BatteryStatus {
         _batteryX = dc.getWidth() / 2;
         _batteryY = dc.getHeight() - 24;
 
-        _batXAdj = _batteryWidth / 2;
+        _batXAdj = (_batteryWidth / 2) + 2;
 
         batteryPoints = [
                             [_batteryX - _batXAdj, _batteryY],
-                            [_batteryX + _batXAdj + 2, _batteryY],
-                            [_batteryX + _batXAdj + 2, _batteryY + _batteryHeight],
+                            [_batteryX + _batXAdj + 4, _batteryY],
+                            [_batteryX + _batXAdj + 4, _batteryY + _batteryHeight],
                             [_batteryX - _batXAdj, _batteryY + _batteryHeight]
                         ];
     }

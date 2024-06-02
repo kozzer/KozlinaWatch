@@ -258,7 +258,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_43
         %ampmY.8 = local;
         %tmp.76 = getv ? :_timeY;
         %tmp.78 = getv ? :_timeHeight;
-        %tmp.79 = 0.5;
+        %tmp.79 = 0.47;
         %tmp.80 = mul %tmp.78 %tmp.79;
         %tmp.81 = add %tmp.76 %tmp.80;
         lputv %ampmY.8 %tmp.81;

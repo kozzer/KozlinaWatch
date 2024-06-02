@@ -59,7 +59,7 @@ class DigitalClock {
         dc.drawText(_timeX, _timeY, _timeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
         var ampmX = _timeX + 84;
-        var ampmY = _timeY + (_timeHeight * 0.5);
+        var ampmY = _timeY + (_timeHeight * 0.47);
         var ampmPoints = [ [ampmX, ampmY], [ampmX, ampmY + 100], [ampmX + 100, ampmY + 100], [ampmX + 100, ampmY] ];
 
         CommonMethods.setDrawingClip(dc, ampmPoints);

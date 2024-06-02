@@ -18,7 +18,8 @@ module ThemeController {
     var MOST_COLOR;        
     var SOME_COLOR;        
     var LOW_COLOR;         
-    var BEER_COLOR;  
+    var BEER_COLOR; 
+    var LABEL_COLOR; 
 
     function setTheme(lightTheme){
         
@@ -31,6 +32,7 @@ module ThemeController {
         CLOCK_HAND_LINE  = 0x808080;     // Gray
         RED_COLOR        = 0xFF0000;     // Red
         LOW_COLOR        = RED_COLOR;
+        LABEL_COLOR      = FADED_MUG_COLOR;
 
         if (_useLightTheme){
 

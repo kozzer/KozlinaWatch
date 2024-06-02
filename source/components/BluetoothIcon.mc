@@ -16,8 +16,8 @@ class BluetoothIcon {
         _iconBitmap = WatchUi.loadResource(Rez.Drawables.BluetoothIcon);
 
         // Set location of points for icon location (upper right corner)
-        _iconX      = dc.getWidth() - 42;
-        _iconY      = 20;
+        _iconX      = dc.getWidth() / 2 - 12;
+        _iconY      = 96;
         _iconPoints = [ 
                         [_iconX, _iconY], 
                         [_iconX + 24, _iconY], 

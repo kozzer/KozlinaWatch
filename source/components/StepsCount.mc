@@ -22,26 +22,26 @@ class StepsCount {
         _tinyFont     = CommonMethods.getTinyFont(dc);
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
-        _stepsX = (_screenWidth / 2) - 12;
-        _stepsY = (_screenHeight / 2) + (_fontHeight * 2);
+        _stepsX = _screenWidth / 2;
+        _stepsY = _screenHeight - 130;
         _stepsPoints = [
-                        [_stepsX - 200, _stepsY],
-                        [_stepsX, _stepsY],
-                        [_stepsX, _stepsY + _fontHeight],
-                        [_stepsX - 200, _stepsY + _fontHeight]
+                        [_stepsX - 100, _stepsY],
+                        [_stepsX + 100, _stepsY],
+                        [_stepsX + 100, _stepsY + _fontHeight],
+                        [_stepsX - 100, _stepsY + _fontHeight]
                      ];
     }
 
     function drawOnScreen(dc, info)
     {
-        var dataString = info.steps.toString();
+        var dataString = info.steps + " steps";
         var stepPerc   = ((info.steps * 100) / info.stepGoal).toNumber();
 
         setStepsDisplayLevelColor(dc, stepPerc);
 
         CommonMethods.setDrawingClip(dc, _stepsPoints);
 
-        dc.drawText(_stepsX, _stepsY, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(_stepsX, _stepsY, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_CENTER);
 
         CommonMethods.clearDrawingClip(dc);
 
