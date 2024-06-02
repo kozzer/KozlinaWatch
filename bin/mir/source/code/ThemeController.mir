@@ -34,7 +34,7 @@ module ThemeController {
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc"; @line = 21; @position = 8; ]
     var BEER_COLOR;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc"; @line = 22; @position = 8; ]
-    var LABEL_COLOR;
+    var RECT_COLOR;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc"; @line = 24; ]
     function setTheme(lightTheme) {
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_24_33_59_4_start:
@@ -57,60 +57,60 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_24_33
         %tmp.8 = getv ? :RED_COLOR;
         putv self :LOW_COLOR %tmp.8;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 35 8 ]
-        %tmp.10 = getv ? :FADED_MUG_COLOR;
-        putv self :LABEL_COLOR %tmp.10;
+        %tmp.9 = 0x391368;
+        putv self :RECT_COLOR %tmp.9;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 37 8 ]
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_stmt:
-        %tmp.12 = getv ? :_useLightTheme;
-        bf %tmp.12 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_false;
+        %tmp.11 = getv ? :_useLightTheme;
+        bf %tmp.11 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_false;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_true:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_27_48_8_start:
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 40 12 ]
-        %tmp.13 = 0xDEDEDE;
-        putv self :BACKGROUND_COLOR %tmp.13;
+        %tmp.12 = 0xDEDEDE;
+        putv self :BACKGROUND_COLOR %tmp.12;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 41 12 ]
-        %tmp.14 = 0x111111;
-        putv self :FONT_COLOR %tmp.14;
+        %tmp.13 = 0x111111;
+        putv self :FONT_COLOR %tmp.13;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 42 12 ]
-        %tmp.15 = 0x0026FF;
-        putv self :BLUE_COLOR %tmp.15;
+        %tmp.14 = 0x0026FF;
+        putv self :BLUE_COLOR %tmp.14;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 43 12 ]
-        %tmp.16 = 0x00C44E;
-        putv self :FULL_COLOR %tmp.16;
+        %tmp.15 = 0x00C44E;
+        putv self :FULL_COLOR %tmp.15;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 44 12 ]
-        %tmp.17 = 0xDBCC00;
-        putv self :MOST_COLOR %tmp.17;
+        %tmp.16 = 0xDBCC00;
+        putv self :MOST_COLOR %tmp.16;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 45 12 ]
-        %tmp.18 = 0xFF6A00;
-        putv self :SOME_COLOR %tmp.18;
+        %tmp.17 = 0xFF6A00;
+        putv self :SOME_COLOR %tmp.17;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 46 12 ]
-        %tmp.19 = 0xFF9328;
-        putv self :BEER_COLOR %tmp.19;
+        %tmp.18 = 0xFF9328;
+        putv self :BEER_COLOR %tmp.18;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_27_48_8_stop:
         goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_end;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_false:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_48_15_58_8_start:
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 51 12 ]
-        %tmp.20 = 0x000000;
-        putv self :BACKGROUND_COLOR %tmp.20;
+        %tmp.19 = 0x000000;
+        putv self :BACKGROUND_COLOR %tmp.19;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 52 12 ]
-        %tmp.21 = 0xDEDEDE;
-        putv self :FONT_COLOR %tmp.21;
+        %tmp.20 = 0xDEDEDE;
+        putv self :FONT_COLOR %tmp.20;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 53 12 ]
-        %tmp.22 = 0x1166FF;
-        putv self :BLUE_COLOR %tmp.22;
+        %tmp.21 = 0x1166FF;
+        putv self :BLUE_COLOR %tmp.21;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 54 12 ]
-        %tmp.23 = 0x00FF00;
-        putv self :FULL_COLOR %tmp.23;
+        %tmp.22 = 0x00FF00;
+        putv self :FULL_COLOR %tmp.22;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 55 12 ]
-        %tmp.24 = 0xFFFF00;
-        putv self :MOST_COLOR %tmp.24;
+        %tmp.23 = 0xFFFF00;
+        putv self :MOST_COLOR %tmp.23;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 56 12 ]
-        %tmp.25 = 0xFF9900;
-        putv self :SOME_COLOR %tmp.25;
+        %tmp.24 = 0xFF9900;
+        putv self :SOME_COLOR %tmp.24;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\ThemeController.mc" 57 12 ]
-        %tmp.27 = getv ? :SOME_COLOR;
-        putv self :BEER_COLOR %tmp.27;
+        %tmp.26 = getv ? :SOME_COLOR;
+        putv self :BEER_COLOR %tmp.26;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_48_15_58_8_stop:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_37_8_58_8_if_end:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_ThemeController_mc_24_33_59_4_stop:

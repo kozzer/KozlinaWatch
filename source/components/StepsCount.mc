@@ -23,29 +23,49 @@ class StepsCount {
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _stepsX = _screenWidth / 2;
-        _stepsY = _screenHeight - 130;
+        _stepsY = _screenHeight - 154;
         _stepsPoints = [
                         [_stepsX - 100, _stepsY],
                         [_stepsX + 100, _stepsY],
                         [_stepsX + 100, _stepsY + _fontHeight],
                         [_stepsX - 100, _stepsY + _fontHeight]
                      ];
+        Theme.resetColors(dc);
     }
 
     function drawOnScreen(dc, info)
     {
-        var dataString = info.steps + " steps";
+        var dataString = info.steps;
         var stepPerc   = ((info.steps * 100) / info.stepGoal).toNumber();
+
+        drawLabelAndRecangle(dc);
 
         setStepsDisplayLevelColor(dc, stepPerc);
 
         CommonMethods.setDrawingClip(dc, _stepsPoints);
 
         dc.drawText(_stepsX, _stepsY, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_CENTER);
+       
+        Theme.resetColors(dc);
+    }
 
-        CommonMethods.clearDrawingClip(dc);
+    private function drawLabelAndRecangle(dc){
+
+        var rectanglePoints = [
+                [_stepsX - 60, _stepsY - 4],
+                [_stepsX + 60, _stepsY - 4],
+                [_stepsX + 60, _stepsY + 48],
+                [_stepsX - 60, _stepsY + 48]
+        ];
+
+        CommonMethods.setDrawingClip(dc, rectanglePoints);
+
+        Theme.setColor(dc, Theme.RECT_COLOR);
+        dc.fillRoundedRectangle(_stepsX - 60, _stepsY, 120, 40, 4);
+        dc.drawText(_stepsX, _stepsY + 32, Graphics.FONT_XTINY, "steps", Graphics.TEXT_JUSTIFY_CENTER);
 
         Theme.resetColors(dc);
+        CommonMethods.clearDrawingClip(dc);
     }
     
     private function setStepsDisplayLevelColor(dc, perc){
