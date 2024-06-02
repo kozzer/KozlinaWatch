@@ -21,7 +21,7 @@ class CaloriesBurned {
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _calsX = 2 * (dc.getWidth() / 3);
-        _calsY = _screenHeight - 90;
+        _calsY = _screenHeight - 126;
 
         _calsPoints = [
                         [_calsX - 100, _calsY],
@@ -34,13 +34,13 @@ class CaloriesBurned {
     function drawOnScreen(dc, info)
     {
 
-        CommonMethods.drawLabelAndRecangle(dc, _calsX, _calsY, "cals");
+        CommonMethods.drawLabelAndRecangle(dc, _calsX, _calsY, "cals", Theme.CALS_COLOR);
 
         var caloriesBurned = info.calories.toString();
 
         CommonMethods.setDrawingClip(dc, _calsPoints);
 
-        dc.drawText(_calsX, _calsY, _tinyFont, caloriesBurned, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(_calsX, _calsY - 1, _tinyFont, caloriesBurned, Graphics.TEXT_JUSTIFY_CENTER);
 
         CommonMethods.clearDrawingClip(dc);
 

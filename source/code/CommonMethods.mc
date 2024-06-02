@@ -74,20 +74,20 @@ module CommonMethods {
         return [min, max];
     }
 
-    public function drawLabelAndRecangle(dc, x, y, label){
+    public function drawLabelAndRecangle(dc, x, y, label, color){
 
         var rectanglePoints = [
-                [x - 60, y + 2],
-                [x + 60, y + 2],
-                [x + 60, y + 70],
-                [x - 60, y + 70]
+                [x - 60, y],
+                [x + 60, y],
+                [x + 60, y + 69],
+                [x - 60, y + 69]
         ];
 
         CommonMethods.setDrawingClip(dc, rectanglePoints);
 
-        Theme.setColor(dc, Theme.RECT_COLOR);
+        Theme.setColor(dc, color);
         dc.fillRoundedRectangle(x - 60, y, 120, 40, 4);
-        dc.drawText(x, y + 36, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, y + 38, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_CENTER);
 
         Theme.resetColors(dc);
         CommonMethods.clearDrawingClip(dc);

@@ -19,7 +19,8 @@ module ThemeController {
     var SOME_COLOR;        
     var LOW_COLOR;         
     var BEER_COLOR; 
-    var RECT_COLOR; 
+    var STEPS_COLOR; 
+    var CALS_COLOR;
 
     function setTheme(lightTheme){
         
@@ -32,7 +33,8 @@ module ThemeController {
         CLOCK_HAND_LINE  = 0x808080;     // Gray
         RED_COLOR        = 0xFF0000;     // Red
         LOW_COLOR        = RED_COLOR;
-        RECT_COLOR       = 0x391368;
+        STEPS_COLOR      = 0x7B83EB;
+        CALS_COLOR       = 0xA85718;
 
         if (_useLightTheme){
 

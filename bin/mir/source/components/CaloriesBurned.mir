@@ -64,7 +64,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_
         putv self :_calsX %tmp.21;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 24 8 ]
         %tmp.23 = getv ? :_screenHeight;
-        %tmp.24 = 90;
+        %tmp.24 = 126;
         %tmp.25 = sub %tmp.23 %tmp.24;
         putv self :_calsY %tmp.25;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 26 8 ]
@@ -130,41 +130,45 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_
         %tmp.7 = getv ? :_calsX;
         %tmp.9 = getv ? :_calsY;
         %tmp.10 = "cals";
-        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.7, %tmp.9, %tmp.10);
+        %tmp.11 = getm $.ThemeController;
+        %tmp.12 = getv %tmp.11 :CALS_COLOR;
+        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.7, %tmp.9, %tmp.10, %tmp.12);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 39 8 ]
         [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_stop" ]
         %caloriesBurned.1 = local;
-        %tmp.11 = lgetv %info;
-        %tmp.12 = getv %tmp.11 :calories;
-        %tmp.13 = getv function %tmp.12 :toString;
-        %tmp.14 = invoke %tmp.12 %tmp.13();
-        lputv %caloriesBurned.1 %tmp.14;
+        %tmp.13 = lgetv %info;
+        %tmp.14 = getv %tmp.13 :calories;
+        %tmp.15 = getv function %tmp.14 :toString;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %caloriesBurned.1 %tmp.16;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 41 8 ]
-        %tmp.16 = getv ? :CommonMethods;
-        %tmp.17 = getv function %tmp.16 :setDrawingClip;
-        %tmp.19 = lgetv %dc;
-        %tmp.21 = getv ? :_calsPoints;
-        invoke %tmp.16 %tmp.17(%tmp.19, %tmp.21);
+        %tmp.18 = getv ? :CommonMethods;
+        %tmp.19 = getv function %tmp.18 :setDrawingClip;
+        %tmp.21 = lgetv %dc;
+        %tmp.23 = getv ? :_calsPoints;
+        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 43 8 ]
-        %tmp.22 = lgetv %dc;
-        %tmp.23 = getv function %tmp.22 :drawText;
-        %tmp.25 = getv ? :_calsX;
-        %tmp.27 = getv ? :_calsY;
-        %tmp.29 = getv ? :_tinyFont;
-        %tmp.31 = lgetv %caloriesBurned.1;
-        %tmp.32 = getm $.Toybox.Graphics;
-        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.22 %tmp.23(%tmp.25, %tmp.27, %tmp.29, %tmp.31, %tmp.33);
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :drawText;
+        %tmp.27 = getv ? :_calsX;
+        %tmp.29 = getv ? :_calsY;
+        %tmp.30 = 1;
+        %tmp.31 = sub %tmp.29 %tmp.30;
+        %tmp.33 = getv ? :_tinyFont;
+        %tmp.35 = lgetv %caloriesBurned.1;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.31, %tmp.33, %tmp.35, %tmp.37);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 45 8 ]
-        %tmp.35 = getv ? :CommonMethods;
-        %tmp.36 = getv function %tmp.35 :clearDrawingClip;
-        %tmp.38 = lgetv %dc;
-        invoke %tmp.35 %tmp.36(%tmp.38);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 47 8 ]
-        %tmp.39 = getm $.ThemeController;
-        %tmp.40 = getv function %tmp.39 :resetColors;
+        %tmp.39 = getv ? :CommonMethods;
+        %tmp.40 = getv function %tmp.39 :clearDrawingClip;
         %tmp.42 = lgetv %dc;
         invoke %tmp.39 %tmp.40(%tmp.42);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 47 8 ]
+        %tmp.43 = getm $.ThemeController;
+        %tmp.44 = getv function %tmp.43 :resetColors;
+        %tmp.46 = lgetv %dc;
+        invoke %tmp.43 %tmp.44(%tmp.46);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_stop:
     }
 }
