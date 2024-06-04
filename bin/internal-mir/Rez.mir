@@ -29,7 +29,7 @@ module Rez {
         <init> {
         }
         [ @file = "c:\Users\David\ConnectIQ\kozzer\KozlinaWatch\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; ]
-        var lemon_milk as ResourceId;
+        var lemon_milk_144 as ResourceId;
     }
     [ @file = "c:\Users\David\ConnectIQ\kozzer\KozlinaWatch\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 17; ]
     module Strings {

@@ -16,17 +16,17 @@ class DigitalClock {
 
     function initialize(dc) {
         
-        _timeFont = Application.loadResource( Rez.Fonts.lemon_milk );
+        _timeFont = Application.loadResource( Rez.Fonts.lemon_milk_144 );
 
         _timeX = (dc.getWidth() / 2) - 12;
-        _timeY = (dc.getHeight() / 2) - 64;
+        _timeY = (dc.getHeight() / 2) - 84;
 
         _timeHeight = Graphics.getFontHeight(_timeFont) + 1;
         _timePoints = [
-                        [_timeX - 100, _timeY],
-                        [_timeX + 100, _timeY],
-                        [_timeX + 100, _timeY + _timeHeight],
-                        [_timeX - 100, _timeY + _timeHeight]
+                        [_timeX - 150, _timeY],
+                        [_timeX + 150, _timeY],
+                        [_timeX + 150, _timeY + _timeHeight],
+                        [_timeX - 150, _timeY + _timeHeight]
                     ];
 
     }       
@@ -58,8 +58,8 @@ class DigitalClock {
         CommonMethods.resetColorsForRendering(dc);
         dc.drawText(_timeX, _timeY, _timeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        var ampmX = _timeX + 84;
-        var ampmY = _timeY + (_timeHeight * 0.47);
+        var ampmX = _timeX + 112;
+        var ampmY = _timeY + (_timeHeight * 0.54);
         var ampmPoints = [ [ampmX, ampmY], [ampmX, ampmY + 100], [ampmX + 100, ampmY + 100], [ampmX + 100, ampmY] ];
 
         CommonMethods.setDrawingClip(dc, ampmPoints);

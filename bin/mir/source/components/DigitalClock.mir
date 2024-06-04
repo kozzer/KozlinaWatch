@@ -42,7 +42,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.3 = getv function %tmp.2 :loadResource;
         %tmp.5 = getv ? :Rez;
         %tmp.6 = getv %tmp.5 :Fonts;
-        %tmp.7 = getv %tmp.6 :lemon_milk;
+        %tmp.7 = getv %tmp.6 :lemon_milk_144;
         %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.7);
         putv self :_timeFont %tmp.8;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 21 8 ]
@@ -60,7 +60,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.18 = invoke %tmp.16 %tmp.17();
         %tmp.19 = 2;
         %tmp.20 = div %tmp.18 %tmp.19;
-        %tmp.21 = 64;
+        %tmp.21 = 84;
         %tmp.22 = sub %tmp.20 %tmp.21;
         putv self :_timeY %tmp.22;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 24 8 ]
@@ -75,7 +75,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.30 = newa 4;
         %tmp.31 = newa 2;
         %tmp.33 = getv ? :_timeX;
-        %tmp.34 = 100;
+        %tmp.34 = 150;
         %tmp.35 = sub %tmp.33 %tmp.34;
         %tmp.36 = dup %tmp.31;
         %tmp.37 = aputv %tmp.36 0 %tmp.35;
@@ -86,7 +86,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.43 = aputv %tmp.42 0 %tmp.41;
         %tmp.44 = newa 2;
         %tmp.46 = getv ? :_timeX;
-        %tmp.47 = 100;
+        %tmp.47 = 150;
         %tmp.48 = add %tmp.46 %tmp.47;
         %tmp.49 = dup %tmp.44;
         %tmp.50 = aputv %tmp.49 0 %tmp.48;
@@ -97,7 +97,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.56 = aputv %tmp.55 1 %tmp.54;
         %tmp.57 = newa 2;
         %tmp.59 = getv ? :_timeX;
-        %tmp.60 = 100;
+        %tmp.60 = 150;
         %tmp.61 = add %tmp.59 %tmp.60;
         %tmp.62 = dup %tmp.57;
         %tmp.63 = aputv %tmp.62 0 %tmp.61;
@@ -110,7 +110,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.72 = aputv %tmp.71 2 %tmp.70;
         %tmp.73 = newa 2;
         %tmp.75 = getv ? :_timeX;
-        %tmp.76 = 100;
+        %tmp.76 = 150;
         %tmp.77 = sub %tmp.75 %tmp.76;
         %tmp.78 = dup %tmp.73;
         %tmp.79 = aputv %tmp.78 0 %tmp.77;
@@ -250,7 +250,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_43
         [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_30_70_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_30_70_4_stop" ]
         %ampmX.7 = local;
         %tmp.72 = getv ? :_timeX;
-        %tmp.73 = 84;
+        %tmp.73 = 112;
         %tmp.74 = add %tmp.72 %tmp.73;
         lputv %ampmX.7 %tmp.74;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 62 8 ]
@@ -258,7 +258,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_43
         %ampmY.8 = local;
         %tmp.76 = getv ? :_timeY;
         %tmp.78 = getv ? :_timeHeight;
-        %tmp.79 = 0.47;
+        %tmp.79 = 0.54;
         %tmp.80 = mul %tmp.78 %tmp.79;
         %tmp.81 = add %tmp.76 %tmp.80;
         lputv %ampmY.8 %tmp.81;
