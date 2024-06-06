@@ -2,7 +2,16 @@
 
     <bitmap id="BluetoothIcon" filename="drawables/bluetooth_blue.png">
         <palette>
-            <color>2546E9</color>
+            <color>003466</color>
+            <color>004B92</color>
+            <color>005CB2</color>
+            <color>0383FB</color>
+            <color>148CFC</color>
+            <color>369CFD</color>
+            <color>5CAFFD</color>
+            <color>6BB7FD</color>
+            <color>BEDFFE</color>
+            <color>FFFFFF</color>
         </palette>
     </bitmap>
 

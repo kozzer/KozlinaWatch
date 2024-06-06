@@ -23,7 +23,7 @@ class StepsCount {
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _stepsX = _screenWidth / 3;
-        _stepsY = _screenHeight - 126;
+        _stepsY = _screenHeight - 112;
         _stepsPoints = [
                         [_stepsX - 100, _stepsY],
                         [_stepsX + 100, _stepsY],

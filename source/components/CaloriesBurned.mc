@@ -21,7 +21,7 @@ class CaloriesBurned {
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _calsX = 2 * (dc.getWidth() / 3);
-        _calsY = _screenHeight - 126;
+        _calsY = _screenHeight - 112;
 
         _calsPoints = [
                         [_calsX - 100, _calsY],

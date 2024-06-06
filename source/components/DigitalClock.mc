@@ -19,7 +19,7 @@ class DigitalClock {
         _timeFont = Application.loadResource( Rez.Fonts.lemon_milk_144 );
 
         _timeX = (dc.getWidth() / 2) - 12;
-        _timeY = (dc.getHeight() / 2) - 84;
+        _timeY = (dc.getHeight() / 2) - 80;
 
         _timeHeight = Graphics.getFontHeight(_timeFont) + 1;
         _timePoints = [

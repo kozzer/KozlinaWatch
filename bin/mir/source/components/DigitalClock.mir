@@ -60,7 +60,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_17
         %tmp.18 = invoke %tmp.16 %tmp.17();
         %tmp.19 = 2;
         %tmp.20 = div %tmp.18 %tmp.19;
-        %tmp.21 = 84;
+        %tmp.21 = 80;
         %tmp.22 = sub %tmp.20 %tmp.21;
         putv self :_timeY %tmp.22;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 24 8 ]

@@ -20,7 +20,7 @@ class MoveBar{
     const _moveBarHeight = 6;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\MoveBar.mc"; @line = 11; @position = 18; ]
     private
-    const _moveBarWidth = 116;
+    const _moveBarWidth = 112;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\MoveBar.mc"; @line = 12; @position = 18; ]
     private
     var _barX;
@@ -50,7 +50,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_MoveBar_mc_17_27_2
         %tmp.13 = getm $.Toybox.Graphics;
         %tmp.14 = getv %tmp.13 :FONT_MEDIUM;
         %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
-        %tmp.16 = 20;
+        %tmp.16 = 10;
         %tmp.17 = add %tmp.15 %tmp.16;
         putv self :_barY %tmp.17;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\MoveBar.mc" 22 8 ]

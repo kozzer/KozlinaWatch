@@ -7,8 +7,8 @@ using ThemeController as Theme;
 class MoveBar {
 
     // Move Bar
-    private const _moveBarHeight = 6;   // = 4;
-    private const _moveBarWidth = 116;  // = 78;
+    private const _moveBarHeight = 6;   
+    private const _moveBarWidth = 112; 
     private var   _barX;
     private var   _barY;
 
@@ -17,7 +17,7 @@ class MoveBar {
     function initialize(dc){
         // Get location of the blue bar
         _barX = ((dc.getWidth() / 2) - (_moveBarWidth / 2));      // Total 116px wide, so 58px left of center
-        _barY = Graphics.getFontHeight(Graphics.FONT_MEDIUM) + 20;
+        _barY = Graphics.getFontHeight(Graphics.FONT_MEDIUM) + 10;
 
         _barPoints = [
                         [_barX, _barY], 

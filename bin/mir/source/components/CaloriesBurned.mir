@@ -64,7 +64,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_
         putv self :_calsX %tmp.21;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 24 8 ]
         %tmp.23 = getv ? :_screenHeight;
-        %tmp.24 = 126;
+        %tmp.24 = 112;
         %tmp.25 = sub %tmp.23 %tmp.24;
         putv self :_calsY %tmp.25;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 26 8 ]

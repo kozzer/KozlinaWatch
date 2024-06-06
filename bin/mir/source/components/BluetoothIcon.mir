@@ -44,7 +44,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BluetoothIcon_mc_1
         %tmp.14 = sub %tmp.12 %tmp.13;
         putv self :_iconX %tmp.14;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BluetoothIcon.mc" 20 8 ]
-        %tmp.15 = 96;
+        %tmp.15 = 84;
         putv self :_iconY %tmp.15;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BluetoothIcon.mc" 21 8 ]
         %tmp.16 = newa 4;
@@ -75,7 +75,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BluetoothIcon_mc_1
         %tmp.46 = dup %tmp.41;
         %tmp.47 = aputv %tmp.46 0 %tmp.45;
         %tmp.49 = getv ? :_iconY;
-        %tmp.50 = 24;
+        %tmp.50 = 36;
         %tmp.51 = add %tmp.49 %tmp.50;
         %tmp.52 = dup %tmp.47;
         %tmp.53 = aputv %tmp.52 1 %tmp.51;
@@ -86,7 +86,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BluetoothIcon_mc_1
         %tmp.59 = dup %tmp.56;
         %tmp.60 = aputv %tmp.59 0 %tmp.58;
         %tmp.62 = getv ? :_iconY;
-        %tmp.63 = 24;
+        %tmp.63 = 36;
         %tmp.64 = add %tmp.62 %tmp.63;
         %tmp.65 = dup %tmp.60;
         %tmp.66 = aputv %tmp.65 1 %tmp.64;

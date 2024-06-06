@@ -16,7 +16,7 @@ class DateTitle {
 
     function initialize(dc) {
         _dateX = dc.getWidth() / 2;
-        _dateY = 14;
+        _dateY = 6;
 
         var dateHeight = Graphics.getFontHeight(_dateFont) + 1;
 
