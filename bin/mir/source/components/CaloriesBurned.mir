@@ -136,39 +136,40 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 39 8 ]
         [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_stop" ]
         %caloriesBurned.1 = local;
-        %tmp.13 = lgetv %info;
-        %tmp.14 = getv %tmp.13 :calories;
-        %tmp.15 = getv function %tmp.14 :toString;
-        %tmp.16 = invoke %tmp.14 %tmp.15();
-        lputv %caloriesBurned.1 %tmp.16;
+        %tmp.14 = getv ? :CommonMethods;
+        %tmp.15 = getv function %tmp.14 :getFormattedStringForNumber;
+        %tmp.16 = lgetv %info;
+        %tmp.17 = getv %tmp.16 :calories;
+        %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
+        lputv %caloriesBurned.1 %tmp.18;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 41 8 ]
-        %tmp.18 = getv ? :CommonMethods;
-        %tmp.19 = getv function %tmp.18 :setDrawingClip;
-        %tmp.21 = lgetv %dc;
-        %tmp.23 = getv ? :_calsPoints;
-        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
+        %tmp.20 = getv ? :CommonMethods;
+        %tmp.21 = getv function %tmp.20 :setDrawingClip;
+        %tmp.23 = lgetv %dc;
+        %tmp.25 = getv ? :_calsPoints;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 43 8 ]
-        %tmp.24 = lgetv %dc;
-        %tmp.25 = getv function %tmp.24 :drawText;
-        %tmp.27 = getv ? :_calsX;
-        %tmp.29 = getv ? :_calsY;
-        %tmp.30 = 1;
-        %tmp.31 = sub %tmp.29 %tmp.30;
-        %tmp.33 = getv ? :_tinyFont;
-        %tmp.35 = lgetv %caloriesBurned.1;
-        %tmp.36 = getm $.Toybox.Graphics;
-        %tmp.37 = getv %tmp.36 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.31, %tmp.33, %tmp.35, %tmp.37);
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :drawText;
+        %tmp.29 = getv ? :_calsX;
+        %tmp.31 = getv ? :_calsY;
+        %tmp.32 = 1;
+        %tmp.33 = sub %tmp.31 %tmp.32;
+        %tmp.35 = getv ? :_tinyFont;
+        %tmp.37 = lgetv %caloriesBurned.1;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.33, %tmp.35, %tmp.37, %tmp.39);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 45 8 ]
-        %tmp.39 = getv ? :CommonMethods;
-        %tmp.40 = getv function %tmp.39 :clearDrawingClip;
-        %tmp.42 = lgetv %dc;
-        invoke %tmp.39 %tmp.40(%tmp.42);
+        %tmp.41 = getv ? :CommonMethods;
+        %tmp.42 = getv function %tmp.41 :clearDrawingClip;
+        %tmp.44 = lgetv %dc;
+        invoke %tmp.41 %tmp.42(%tmp.44);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\CaloriesBurned.mc" 47 8 ]
-        %tmp.43 = getm $.ThemeController;
-        %tmp.44 = getv function %tmp.43 :resetColors;
-        %tmp.46 = lgetv %dc;
-        invoke %tmp.43 %tmp.44(%tmp.46);
+        %tmp.45 = getm $.ThemeController;
+        %tmp.46 = getv function %tmp.45 :resetColors;
+        %tmp.48 = lgetv %dc;
+        invoke %tmp.45 %tmp.46(%tmp.48);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_CaloriesBurned_mc_35_4_48_4_stop:
     }
 }

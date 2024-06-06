@@ -35,7 +35,8 @@ class StepsCount {
 
     function drawOnScreen(dc, info)
     {
-        var dataString = info.steps;
+        var stepsString = CommonMethods.getFormattedStringForNumber(info.steps);
+
         var stepPerc   = ((info.steps * 100) / info.stepGoal).toNumber();
 
         CommonMethods.drawLabelAndRecangle(dc, _stepsX, _stepsY, "steps", Theme.STEPS_COLOR);
@@ -44,12 +45,12 @@ class StepsCount {
 
         CommonMethods.setDrawingClip(dc, _stepsPoints);
 
-        dc.drawText(_stepsX, _stepsY - 1, _tinyFont, dataString, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(_stepsX, _stepsY - 1, _tinyFont, stepsString, Graphics.TEXT_JUSTIFY_CENTER);
        
         Theme.resetColors(dc);
     }
 
-
+  
     
     private function setStepsDisplayLevelColor(dc, perc){
         if (System.getClockTime().hour < 14) {

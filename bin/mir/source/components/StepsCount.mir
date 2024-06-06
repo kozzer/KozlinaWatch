@@ -131,175 +131,178 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_19_2
     }
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc"; @line = 36; ]
     function drawOnScreen(dc, info) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_start:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_start:
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 38 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_stop" ]
-        %dataString.1 = local;
-        %tmp.1 = lgetv %info;
-        %tmp.2 = getv %tmp.1 :steps;
-        lputv %dataString.1 %tmp.2;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 39 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_stop" ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_stop" ]
+        %stepsString.1 = local;
+        %tmp.2 = getv ? :CommonMethods;
+        %tmp.3 = getv function %tmp.2 :getFormattedStringForNumber;
+        %tmp.4 = lgetv %info;
+        %tmp.5 = getv %tmp.4 :steps;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.5);
+        lputv %stepsString.1 %tmp.6;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 40 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_stop" ]
         %stepPerc.2 = local;
-        %tmp.3 = lgetv %info;
-        %tmp.4 = getv %tmp.3 :steps;
-        %tmp.5 = 100;
-        %tmp.6 = mul %tmp.4 %tmp.5;
         %tmp.7 = lgetv %info;
-        %tmp.8 = getv %tmp.7 :stepGoal;
-        %tmp.9 = div %tmp.6 %tmp.8;
-        %tmp.10 = getv function %tmp.9 :toNumber;
-        %tmp.11 = invoke %tmp.9 %tmp.10();
-        lputv %stepPerc.2 %tmp.11;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 41 8 ]
-        %tmp.13 = getv ? :CommonMethods;
-        %tmp.14 = getv function %tmp.13 :drawLabelAndRecangle;
-        %tmp.16 = lgetv %dc;
-        %tmp.18 = getv ? :_stepsX;
-        %tmp.20 = getv ? :_stepsY;
-        %tmp.21 = "steps";
-        %tmp.22 = getm $.ThemeController;
-        %tmp.23 = getv %tmp.22 :STEPS_COLOR;
-        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18, %tmp.20, %tmp.21, %tmp.23);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 43 8 ]
-        %tmp.24 = self;
-        %tmp.25 = getv function %tmp.24 :setStepsDisplayLevelColor;
-        %tmp.27 = lgetv %dc;
-        %tmp.29 = lgetv %stepPerc.2;
-        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 45 8 ]
-        %tmp.31 = getv ? :CommonMethods;
-        %tmp.32 = getv function %tmp.31 :setDrawingClip;
-        %tmp.34 = lgetv %dc;
-        %tmp.36 = getv ? :_stepsPoints;
-        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 47 8 ]
-        %tmp.37 = lgetv %dc;
-        %tmp.38 = getv function %tmp.37 :drawText;
-        %tmp.40 = getv ? :_stepsX;
-        %tmp.42 = getv ? :_stepsY;
-        %tmp.43 = 1;
-        %tmp.44 = sub %tmp.42 %tmp.43;
-        %tmp.46 = getv ? :_tinyFont;
-        %tmp.48 = lgetv %dataString.1;
-        %tmp.49 = getm $.Toybox.Graphics;
-        %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.44, %tmp.46, %tmp.48, %tmp.50);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 49 8 ]
-        %tmp.51 = getm $.ThemeController;
-        %tmp.52 = getv function %tmp.51 :resetColors;
-        %tmp.54 = lgetv %dc;
-        invoke %tmp.51 %tmp.52(%tmp.54);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_50_4_stop:
+        %tmp.8 = getv %tmp.7 :steps;
+        %tmp.9 = 100;
+        %tmp.10 = mul %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %info;
+        %tmp.12 = getv %tmp.11 :stepGoal;
+        %tmp.13 = div %tmp.10 %tmp.12;
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %stepPerc.2 %tmp.15;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 42 8 ]
+        %tmp.17 = getv ? :CommonMethods;
+        %tmp.18 = getv function %tmp.17 :drawLabelAndRecangle;
+        %tmp.20 = lgetv %dc;
+        %tmp.22 = getv ? :_stepsX;
+        %tmp.24 = getv ? :_stepsY;
+        %tmp.25 = "steps";
+        %tmp.26 = getm $.ThemeController;
+        %tmp.27 = getv %tmp.26 :STEPS_COLOR;
+        invoke %tmp.17 %tmp.18(%tmp.20, %tmp.22, %tmp.24, %tmp.25, %tmp.27);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 44 8 ]
+        %tmp.28 = self;
+        %tmp.29 = getv function %tmp.28 :setStepsDisplayLevelColor;
+        %tmp.31 = lgetv %dc;
+        %tmp.33 = lgetv %stepPerc.2;
+        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 46 8 ]
+        %tmp.35 = getv ? :CommonMethods;
+        %tmp.36 = getv function %tmp.35 :setDrawingClip;
+        %tmp.38 = lgetv %dc;
+        %tmp.40 = getv ? :_stepsPoints;
+        invoke %tmp.35 %tmp.36(%tmp.38, %tmp.40);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 48 8 ]
+        %tmp.41 = lgetv %dc;
+        %tmp.42 = getv function %tmp.41 :drawText;
+        %tmp.44 = getv ? :_stepsX;
+        %tmp.46 = getv ? :_stepsY;
+        %tmp.47 = 1;
+        %tmp.48 = sub %tmp.46 %tmp.47;
+        %tmp.50 = getv ? :_tinyFont;
+        %tmp.52 = lgetv %stepsString.1;
+        %tmp.53 = getm $.Toybox.Graphics;
+        %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.48, %tmp.50, %tmp.52, %tmp.54);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 50 8 ]
+        %tmp.55 = getm $.ThemeController;
+        %tmp.56 = getv function %tmp.55 :resetColors;
+        %tmp.58 = lgetv %dc;
+        invoke %tmp.55 %tmp.56(%tmp.58);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_37_4_51_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc"; @line = 54; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc"; @line = 55; ]
     private
     function setStepsDisplayLevelColor(dc, perc) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_54_56_74_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 55 8 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_56_75_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 56 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_stmt:
         %tmp.1 = getm $.Toybox.System;
         %tmp.2 = getv function %tmp.1 :getClockTime;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = getv %tmp.3 :hour;
         %tmp.5 = 14;
         %tmp.6 = lt %tmp.4 %tmp.5;
-        bf %tmp.6 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_45_58_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 57 12 ]
+        bf %tmp.6 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_45_59_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 58 12 ]
         %tmp.7 = getm $.ThemeController;
         %tmp.8 = getv function %tmp.7 :resetColors;
         %tmp.10 = lgetv %dc;
         invoke %tmp.7 %tmp.8(%tmp.10);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_45_58_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 58 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_45_59_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 59 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_stmt:
         %tmp.12 = lgetv %perc;
         %tmp.13 = 100;
         %tmp.14 = gt %tmp.12 %tmp.13;
-        bf %tmp.14 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_31_61_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 60 12 ]
+        bf %tmp.14 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_31_62_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 61 12 ]
         %tmp.15 = getm $.ThemeController;
         %tmp.16 = getv function %tmp.15 :setColor;
         %tmp.18 = lgetv %dc;
         %tmp.19 = getm $.ThemeController;
         %tmp.20 = getv %tmp.19 :FULL_COLOR;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_31_61_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 61 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_31_62_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 62 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_stmt:
         %tmp.22 = lgetv %perc;
         %tmp.23 = 60;
         %tmp.24 = gt %tmp.22 %tmp.23;
-        bf %tmp.24 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_30_64_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 63 12 ]
+        bf %tmp.24 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_30_65_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 64 12 ]
         %tmp.25 = getm $.ThemeController;
         %tmp.26 = getv function %tmp.25 :setColor;
         %tmp.28 = lgetv %dc;
         %tmp.29 = getm $.ThemeController;
         %tmp.30 = getv %tmp.29 :MOST_COLOR;
         invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_30_64_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 64 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_30_65_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 65 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_stmt:
         %tmp.32 = lgetv %perc;
         %tmp.33 = 30;
         %tmp.34 = gt %tmp.32 %tmp.33;
-        bf %tmp.34 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_30_67_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 66 12 ]
+        bf %tmp.34 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_30_68_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 67 12 ]
         %tmp.35 = getm $.ThemeController;
         %tmp.36 = getv function %tmp.35 :setColor;
         %tmp.38 = lgetv %dc;
         %tmp.39 = getm $.ThemeController;
         %tmp.40 = getv %tmp.39 :SOME_COLOR;
         invoke %tmp.35 %tmp.36(%tmp.38, %tmp.40);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_30_67_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 67 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_30_68_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 68 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_stmt:
         %tmp.42 = lgetv %perc;
         %tmp.43 = 0;
         %tmp.44 = gt %tmp.42 %tmp.43;
-        bf %tmp.44 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_29_70_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 69 12 ]
+        bf %tmp.44 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_29_71_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 70 12 ]
         %tmp.45 = getm $.ThemeController;
         %tmp.46 = getv function %tmp.45 :setColor;
         %tmp.48 = lgetv %dc;
         %tmp.49 = getm $.ThemeController;
         %tmp.50 = getv %tmp.49 :LOW_COLOR;
         invoke %tmp.45 %tmp.46(%tmp.48, %tmp.50);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_29_70_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_false:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_70_15_73_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 72 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_29_71_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_false:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_71_15_74_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 73 12 ]
         %tmp.51 = getm $.ThemeController;
         %tmp.52 = getv function %tmp.51 :resetColors;
         %tmp.54 = lgetv %dc;
         invoke %tmp.51 %tmp.52(%tmp.54);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_70_15_73_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_67_15_73_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_64_15_73_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_61_15_73_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_58_15_73_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_8_73_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_54_56_74_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_71_15_74_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_68_15_74_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_65_15_74_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_62_15_74_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_59_15_74_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_56_8_74_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_55_56_75_4_stop:
     }
 }
 [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc"; @line = 1; ]

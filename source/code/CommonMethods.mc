@@ -95,11 +95,30 @@ module CommonMethods {
 
         // Colored label text
         Theme.setColor(dc, color);
-        var labelText = Lang.format(format, parameters);
         dc.drawText(x, y + 38, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_CENTER);
 
         Theme.resetColors(dc);
         CommonMethods.clearDrawingClip(dc);
+    }
+
+    public function getFormattedStringForNumber(num){
+
+        var numString = num.toString() as Toybox.Lang.String;
+        var stringLength = numString.length();
+        var formattedString = "";
+
+        var maxIndex = stringLength - 1;
+        for (var i = maxIndex; i >= 0; i--) {
+
+            if (((stringLength - i) % 3 == 1) && i < maxIndex){
+                formattedString = "," + formattedString;
+            }
+
+            var curChar = numString.substring(i, i + 1);
+            formattedString = curChar + formattedString;
+        }
+
+        return formattedString;
     }
 
   }

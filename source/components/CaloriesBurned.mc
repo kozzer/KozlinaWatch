@@ -36,7 +36,7 @@ class CaloriesBurned {
 
         CommonMethods.drawLabelAndRecangle(dc, _calsX, _calsY, "cals", Theme.CALS_COLOR);
 
-        var caloriesBurned = info.calories.toString();
+        var caloriesBurned = CommonMethods.getFormattedStringForNumber(info.calories);
 
         CommonMethods.setDrawingClip(dc, _calsPoints);
 
