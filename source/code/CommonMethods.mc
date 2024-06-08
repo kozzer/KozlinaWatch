@@ -101,6 +101,23 @@ module CommonMethods {
         CommonMethods.clearDrawingClip(dc);
     }
 
+    function convertToFahrenheit(degreesCelcius){
+
+        var temp = (degreesCelcius * 9) / 5 + 32;
+        var str = temp.toString() as Toybox.Lang.String;
+        var formattedString = "";
+
+        for (var i = 0; i < str.length(); i++){
+            var curChar = str.substring(i, i + 1);
+            if (curChar.equals(".")){
+                break;
+            }
+            formattedString = formattedString + curChar;
+        }
+        return formattedString;
+    }
+
+
     public function getFormattedStringForNumber(num){
 
         var numString = num.toString() as Toybox.Lang.String;

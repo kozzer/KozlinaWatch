@@ -21,10 +21,10 @@ class KozlinaWatchView extends WatchUi.WatchFace
     var _digitalClock;
     var _dateTitle;                          // Reference to date in large font
     var _moveBar;                            // Reference to MoveBar object
+    var _weather;                            // Reference to Weather object
     var _bluetoothIcon;                      // Reference to bluetooth icon when connected to phone
     var _stepsCount;                         // Reference to StepsCount object
     var _batteryStatus;                      // Reference to BatteryStatus object
-    var _milesWalked;                        // Reference to MilesWalked object
     var _caloriesBurned;                     // Reference to CaloriesBurned object
 
     // Initialize variables for this view
@@ -81,6 +81,7 @@ class KozlinaWatchView extends WatchUi.WatchFace
         _digitalClock   = new DigitalClock(dc);
         _dateTitle      = new DateTitle(dc);
         _moveBar        = new MoveBar(dc);
+        _weather        = new Weather(dc);
         _bluetoothIcon  = new BluetoothIcon(dc);
         _stepsCount     = new StepsCount(dc);
         _batteryStatus  = new BatteryStatus(dc);
@@ -88,13 +89,18 @@ class KozlinaWatchView extends WatchUi.WatchFace
     }
 
     function drawUIComponents(dc) {
-        // Get steps info
-        var activityInfo = ActivityMonitor.getInfo();
+
 
         // When awake only! -- Draw UI components onto the passed-in DC (buffer)
         if (_isAwake){
+            
+            // Get activity info object from watch
+            var activityInfo = ActivityMonitor.getInfo();
+            
             _dateTitle.drawOnScreen(dc);
             _moveBar.drawOnScreen(dc, activityInfo);
+            _weather.drawOnScreen(dc, activityInfo);
+
             _bluetoothIcon.drawOnScreen(dc);
             _batteryStatus.drawOnScreen(dc);
 
