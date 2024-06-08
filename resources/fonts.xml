@@ -1,4 +1,5 @@
 <resources>
-    <!-- Use BMFont to export specific chars from installed font to file(s) needed here -->
-    <font id="lemon_milk_144" filename="fonts/lemon_milk_144.fnt" antialias="true"  />
+    <!-- Use BMFont to export specific chars from windows-installed font to file(s) needed here -->
+    <font id="lemon_milk_144"       filename="fonts/lemon_milk_144.fnt"       antialias="true"  />
+    <font id="lemon_milk_light_144" filename="fonts/lemon_milk_light_144.fnt" antialias="true"  />
 </resources>

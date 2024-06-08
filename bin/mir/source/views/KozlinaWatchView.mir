@@ -240,7 +240,8 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_95_
         %tmp.50 = getv ? :_digitalClock;
         %tmp.51 = getv function %tmp.50 :drawOnScreen;
         %tmp.53 = lgetv %dc;
-        invoke %tmp.50 %tmp.51(%tmp.53);
+        %tmp.55 = getv ? :_isAwake;
+        invoke %tmp.50 %tmp.51(%tmp.53, %tmp.55);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_91_34_113_4_stop:
     }
 }

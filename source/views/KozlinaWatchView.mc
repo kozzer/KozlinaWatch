@@ -109,7 +109,7 @@ class KozlinaWatchView extends WatchUi.WatchFace
         }
 
         // Draw clock last so it's over everything else
-        _digitalClock.drawOnScreen(dc);      
+        _digitalClock.drawOnScreen(dc, _isAwake);      
     }
 }
 

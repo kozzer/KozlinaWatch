@@ -12,6 +12,7 @@ module Rez {
 
     module Fonts {
         (:initialized) var lemon_milk_144 as ResourceId;
+        (:initialized) var lemon_milk_light_144 as ResourceId;
     } // Fonts
 
     module Strings {

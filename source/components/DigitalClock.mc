@@ -8,7 +8,8 @@ using ThemeController as Theme;
 
 class DigitalClock {
 
-    private var _timeFont;
+    private var _normalTimeFont;
+    private var _lightTimeFont;
     private var _timeX;
     private var _timeY;
     private var _timeHeight;
@@ -16,12 +17,13 @@ class DigitalClock {
 
     function initialize(dc) {
         
-        _timeFont = Application.loadResource( Rez.Fonts.lemon_milk_144 );
+        _normalTimeFont = Application.loadResource( Rez.Fonts.lemon_milk_144 );
+        _lightTimeFont  = Application.loadResource( Rez.Fonts.lemon_milk_light_144 );
 
-        _timeX = (dc.getWidth() / 2) - 12;
+        _timeX = dc.getWidth() / 2;
         _timeY = (dc.getHeight() / 2) - 80;
 
-        _timeHeight = Graphics.getFontHeight(_timeFont) + 1;
+        _timeHeight = Graphics.getFontHeight(_normalTimeFont) + 1;
         _timePoints = [
                         [_timeX - 150, _timeY],
                         [_timeX + 150, _timeY],
@@ -34,7 +36,19 @@ class DigitalClock {
 
 
         // Draw the date string into the provided buffer at the specified location
-    function drawOnScreen(dc) {
+    function drawOnScreen(dc, isAwake) {
+
+        // Get local copies of root values
+        var timeX = _timeX;
+        var timeY = _timeY;
+
+        // Always-On Display: Randomly move time 4px in any direction upon each update 
+        //  to help prevent burn in
+        if (isAwake == false){
+            timeX = timeX + (Math.rand() % 4) + 1;
+            timeY = timeY + (Math.rand() % 4) + 1;
+        }
+
         var greg = Gregorian.info(Time.now(), Time.FORMAT_SHORT);       // Greg is 16th century new hotness, Julian is old and busted
         
         // Get the display hour and AM/PM 
@@ -56,15 +70,28 @@ class DigitalClock {
         CommonMethods.setDrawingClip(dc, _timePoints);
 
         CommonMethods.resetColorsForRendering(dc);
-        dc.drawText(_timeX, _timeY, _timeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        var ampmX = _timeX + 112;
-        var ampmY = _timeY + (_timeHeight * 0.54);
+        if (isAwake){
+
+            // Normal thickness for when display is awake
+            dc.drawText(timeX, timeY, _normalTimeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        } else {
+
+            // Thinner font for the "always-on display"
+            dc.drawText(timeX, timeY, _lightTimeFont, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        }
+
+        var ampmX = timeX + 112;
+        var ampmY = timeY + (_timeHeight * 0.54);
         var ampmPoints = [ [ampmX, ampmY], [ampmX, ampmY + 100], [ampmX + 100, ampmY + 100], [ampmX + 100, ampmY] ];
 
         CommonMethods.setDrawingClip(dc, ampmPoints);
 
-        dc.drawText(ampmX, ampmY, Graphics.FONT_GLANCE_NUMBER, ampm, Graphics.TEXT_JUSTIFY_LEFT);
+        // Only draw AM/PM when screen is awake
+        //if (isAwake){
+            dc.drawText(ampmX, ampmY, Graphics.FONT_GLANCE_NUMBER, ampm, Graphics.TEXT_JUSTIFY_LEFT);
+        //}
 
         CommonMethods.clearDrawingClip(dc);
     }
