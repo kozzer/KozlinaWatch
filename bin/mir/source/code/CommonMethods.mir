@@ -38,55 +38,21 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_18_41_2
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_18_41_20_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 22; ]
-    function getTinyFont(dc) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_22_28_29_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 23 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_22_28_29_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_22_28_29_4_stop" ]
-        %width.1 = local;
-        %tmp.1 = lgetv %dc;
-        %tmp.2 = getv function %tmp.1 :getWidth;
-        %tmp.3 = invoke %tmp.1 %tmp.2();
-        lputv %width.1 %tmp.3;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 24 8 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_stmt:
-        %tmp.5 = lgetv %width.1;
-        %tmp.6 = 240;
-        %tmp.7 = lt %tmp.5 %tmp.6;
-        bf %tmp.7 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_24_26_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 25 12 ]
-        %tmp.8 = getm $.Toybox.Graphics;
-        %tmp.9 = getv %tmp.8 :FONT_XTINY;
-        ret %tmp.9;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_24_26_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_false:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_26_15_28_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 27 12 ]
-        %tmp.10 = getm $.Toybox.Graphics;
-        %tmp.11 = getv %tmp.10 :FONT_TINY;
-        ret %tmp.11;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_26_15_28_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_24_8_28_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_22_28_29_4_stop:
-    }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 32; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 23; ]
     function setDrawingClip(dc, rectanglePoints) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 34 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 25 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :clearClip;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 37 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 28 8 ]
         %tmp.3 = self;
         %tmp.4 = getv function %tmp.3 :getBoundingBox;
         %tmp.6 = lgetv %rectanglePoints;
         %tmp.7 = invoke %tmp.3 %tmp.4(%tmp.6);
         putv self :_curClip %tmp.7;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 38 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 29 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_stop" ]
         %bboxWidth.1 = local;
         %tmp.9 = getv ? :_curClip;
         %tmp.10 = 1;
@@ -102,8 +68,8 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_4
         %tmp.21 = 1;
         %tmp.22 = add %tmp.20 %tmp.21;
         lputv %bboxWidth.1 %tmp.22;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 39 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 30 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_stop" ]
         %bboxHeight.2 = local;
         %tmp.24 = getv ? :_curClip;
         %tmp.25 = 1;
@@ -119,7 +85,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_4
         %tmp.36 = 1;
         %tmp.37 = add %tmp.35 %tmp.36;
         lputv %bboxHeight.2 %tmp.37;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 42 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 33 8 ]
         %tmp.38 = lgetv %dc;
         %tmp.39 = getv function %tmp.38 :setClip;
         %tmp.41 = getv ? :_curClip;
@@ -135,25 +101,25 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_4
         %tmp.53 = lgetv %bboxWidth.1;
         %tmp.55 = lgetv %bboxHeight.2;
         invoke %tmp.38 %tmp.39(%tmp.45, %tmp.51, %tmp.53, %tmp.55);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_32_49_43_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_23_49_34_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 46; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 37; ]
     function clearDrawingClip(dc) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_46_34_49_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 47 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_37_34_40_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 38 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :clearClip;
         invoke %tmp.1 %tmp.2();
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 48 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 39 8 ]
         %tmp.3 = null;
         putv self :_curClip %tmp.3;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_46_34_49_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_37_34_40_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 52; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 43; ]
     function getBoundingBox(points) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 53 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 44 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_stop" ]
         %min.1 = local;
         %tmp.1 = newa 2;
         %tmp.2 = 9999;
@@ -163,8 +129,8 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_7
         %tmp.6 = dup %tmp.4;
         %tmp.7 = aputv %tmp.6 1 %tmp.5;
         lputv %min.1 %tmp.7;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 54 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 45 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_stop" ]
         %max.2 = local;
         %tmp.8 = newa 2;
         %tmp.9 = 0;
@@ -174,24 +140,24 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_7
         %tmp.13 = dup %tmp.11;
         %tmp.14 = aputv %tmp.13 1 %tmp.12;
         lputv %max.2 %tmp.14;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 56 8 ]
-        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_init:
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_end" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 47 8 ]
+        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_init:
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_end" ]
         %i.3 = local;
         %tmp.15 = 0;
         lputv %i.3 %tmp.15;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_test:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_test:
         %tmp.17 = lgetv %i.3;
         %tmp.18 = lgetv %points;
         %tmp.19 = getv function %tmp.18 :size;
         %tmp.20 = invoke %tmp.18 %tmp.19();
         %tmp.21 = lt %tmp.17 %tmp.20;
-        bf %tmp.21 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_begin:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_48_72_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 57 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_59_12_if_stmt:
+        bf %tmp.21 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_begin:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_48_63_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 48 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_12_50_12_if_stmt:
         %tmp.23 = lgetv %points;
         %tmp.25 = lgetv %i.3;
         %tmp.26 = agetv %tmp.23 %tmp.25;
@@ -201,10 +167,10 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_5
         %tmp.31 = 0;
         %tmp.32 = agetv %tmp.30 %tmp.31;
         %tmp.33 = lt %tmp.28 %tmp.32;
-        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_59_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_59_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_38_59_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 58 16 ]
+        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_12_50_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_12_50_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_38_50_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 49 16 ]
         %tmp.34 = lgetv %min.1;
         %tmp.36 = lgetv %points;
         %tmp.38 = lgetv %i.3;
@@ -213,11 +179,11 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_38_5
         %tmp.41 = agetv %tmp.39 %tmp.40;
         %tmp.42 = 0;
         aputv %tmp.34 %tmp.42 %tmp.41;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_38_59_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_59_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_57_12_59_12_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 61 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_63_12_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_38_50_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_12_50_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_48_12_50_12_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 52 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_12_54_12_if_stmt:
         %tmp.44 = lgetv %points;
         %tmp.46 = lgetv %i.3;
         %tmp.47 = agetv %tmp.44 %tmp.46;
@@ -227,10 +193,10 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_6
         %tmp.52 = 1;
         %tmp.53 = agetv %tmp.51 %tmp.52;
         %tmp.54 = lt %tmp.49 %tmp.53;
-        bf %tmp.54 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_63_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_63_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_38_63_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 62 16 ]
+        bf %tmp.54 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_12_54_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_12_54_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_38_54_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 53 16 ]
         %tmp.55 = lgetv %min.1;
         %tmp.57 = lgetv %points;
         %tmp.59 = lgetv %i.3;
@@ -239,11 +205,11 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_38_6
         %tmp.62 = agetv %tmp.60 %tmp.61;
         %tmp.63 = 1;
         aputv %tmp.55 %tmp.63 %tmp.62;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_38_63_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_63_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_61_12_63_12_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 65 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_67_12_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_38_54_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_12_54_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_12_54_12_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 56 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_12_58_12_if_stmt:
         %tmp.65 = lgetv %points;
         %tmp.67 = lgetv %i.3;
         %tmp.68 = agetv %tmp.65 %tmp.67;
@@ -253,10 +219,10 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_6
         %tmp.73 = 0;
         %tmp.74 = agetv %tmp.72 %tmp.73;
         %tmp.75 = gt %tmp.70 %tmp.74;
-        bf %tmp.75 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_67_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_67_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_38_67_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 66 16 ]
+        bf %tmp.75 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_12_58_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_12_58_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_38_58_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 57 16 ]
         %tmp.76 = lgetv %max.2;
         %tmp.78 = lgetv %points;
         %tmp.80 = lgetv %i.3;
@@ -265,11 +231,11 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_38_6
         %tmp.83 = agetv %tmp.81 %tmp.82;
         %tmp.84 = 0;
         aputv %tmp.76 %tmp.84 %tmp.83;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_38_67_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_67_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_65_12_67_12_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 69 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_71_12_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_38_58_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_12_58_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_12_58_12_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 60 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_12_62_12_if_stmt:
         %tmp.86 = lgetv %points;
         %tmp.88 = lgetv %i.3;
         %tmp.89 = agetv %tmp.86 %tmp.88;
@@ -279,10 +245,10 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_7
         %tmp.94 = 1;
         %tmp.95 = agetv %tmp.93 %tmp.94;
         %tmp.96 = gt %tmp.91 %tmp.95;
-        bf %tmp.96 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_71_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_71_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_38_71_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 70 16 ]
+        bf %tmp.96 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_12_62_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_12_62_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_38_62_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 61 16 ]
         %tmp.97 = lgetv %max.2;
         %tmp.99 = lgetv %points;
         %tmp.101 = lgetv %i.3;
@@ -291,18 +257,18 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_38_7
         %tmp.104 = agetv %tmp.102 %tmp.103;
         %tmp.105 = 1;
         aputv %tmp.97 %tmp.105 %tmp.104;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_38_71_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_71_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_69_12_71_12_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_48_72_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_incr:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 56 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_38_62_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_12_62_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_60_12_62_12_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_48_63_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_incr:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 47 ]
         %tmp.108 = lgetv %i.3;
         %tmp.109 = add %tmp.108 1;
         lputv %i.3 %tmp.109;
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_test;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72_8_for_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 74 8 ]
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_test;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_47_8_63_8_for_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 65 8 ]
         %tmp.110 = newa 2;
         %tmp.112 = lgetv %min.1;
         %tmp.113 = dup %tmp.110;
@@ -311,13 +277,13 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_56_8_72
         %tmp.117 = dup %tmp.114;
         %tmp.118 = aputv %tmp.117 1 %tmp.116;
         ret %tmp.118;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_52_36_75_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_43_36_66_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 77; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 68; ]
     function drawLabelAndRecangle(dc, x, y, label, color) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_102_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 79 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_102_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_102_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_93_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 70 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_93_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_93_4_stop" ]
         %rectanglePoints.1 = local;
         %tmp.1 = newa 4;
         %tmp.2 = newa 2;
@@ -369,19 +335,19 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_1
         %tmp.56 = dup %tmp.42;
         %tmp.57 = aputv %tmp.56 3 %tmp.55;
         lputv %rectanglePoints.1 %tmp.57;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 86 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 77 8 ]
         %tmp.59 = getv ? :CommonMethods;
         %tmp.60 = getv function %tmp.59 :setDrawingClip;
         %tmp.62 = lgetv %dc;
         %tmp.64 = lgetv %rectanglePoints.1;
         invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 89 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 80 8 ]
         %tmp.65 = getm $.ThemeController;
         %tmp.66 = getv function %tmp.65 :setColor;
         %tmp.68 = lgetv %dc;
         %tmp.70 = lgetv %color;
         invoke %tmp.65 %tmp.66(%tmp.68, %tmp.70);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 90 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 81 8 ]
         %tmp.71 = lgetv %dc;
         %tmp.72 = getv function %tmp.71 :fillRoundedRectangle;
         %tmp.74 = lgetv %x;
@@ -392,13 +358,13 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_1
         %tmp.80 = 40;
         %tmp.81 = 4;
         invoke %tmp.71 %tmp.72(%tmp.76, %tmp.78, %tmp.79, %tmp.80, %tmp.81);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 93 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 84 8 ]
         %tmp.82 = getm $.ThemeController;
         %tmp.83 = getv function %tmp.82 :setColor;
         %tmp.85 = lgetv %dc;
         %tmp.86 = 0x000000;
         invoke %tmp.82 %tmp.83(%tmp.85, %tmp.86);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 94 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 85 8 ]
         %tmp.87 = lgetv %dc;
         %tmp.88 = getv function %tmp.87 :fillRoundedRectangle;
         %tmp.90 = lgetv %x;
@@ -411,13 +377,13 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_1
         %tmp.98 = 36;
         %tmp.99 = 4;
         invoke %tmp.87 %tmp.88(%tmp.92, %tmp.96, %tmp.97, %tmp.98, %tmp.99);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 97 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 88 8 ]
         %tmp.100 = getm $.ThemeController;
         %tmp.101 = getv function %tmp.100 :setColor;
         %tmp.103 = lgetv %dc;
         %tmp.105 = lgetv %color;
         invoke %tmp.100 %tmp.101(%tmp.103, %tmp.105);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 98 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 89 8 ]
         %tmp.106 = lgetv %dc;
         %tmp.107 = getv function %tmp.106 :drawText;
         %tmp.109 = lgetv %x;
@@ -430,23 +396,23 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_1
         %tmp.118 = getm $.Toybox.Graphics;
         %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.106 %tmp.107(%tmp.109, %tmp.113, %tmp.115, %tmp.117, %tmp.119);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 100 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 91 8 ]
         %tmp.120 = getm $.ThemeController;
         %tmp.121 = getv function %tmp.120 :resetColors;
         %tmp.123 = lgetv %dc;
         invoke %tmp.120 %tmp.121(%tmp.123);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 101 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 92 8 ]
         %tmp.125 = getv ? :CommonMethods;
         %tmp.126 = getv function %tmp.125 :clearDrawingClip;
         %tmp.128 = lgetv %dc;
         invoke %tmp.125 %tmp.126(%tmp.128);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_77_64_102_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_93_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 104; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 95; ]
     function convertToFahrenheit(degreesCelcius) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 106 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 97 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_stop" ]
         %temp.1 = local;
         %tmp.2 = lgetv %degreesCelcius;
         %tmp.3 = 9;
@@ -456,37 +422,37 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_
         %tmp.7 = 32;
         %tmp.8 = add %tmp.6 %tmp.7;
         lputv %temp.1 %tmp.8;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 107 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 98 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_stop" ]
         %str.2 = local;
         %tmp.9 = lgetv %temp.1;
         %tmp.10 = getv function %tmp.9 :toString;
         %tmp.11 = invoke %tmp.9 %tmp.10();
         %tmp.12 = as %tmp.11 Toybox.Lang.String;
         lputv %str.2 %tmp.12;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 108 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 99 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_stop" ]
         %formattedString.3 = local;
         %tmp.13 = "";
         lputv %formattedString.3 %tmp.13;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 110 8 ]
-        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_init:
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_end" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 101 8 ]
+        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_init:
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_end" ]
         %i.4 = local;
         %tmp.14 = 0;
         lputv %i.4 %tmp.14;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_test:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_test:
         %tmp.16 = lgetv %i.4;
         %tmp.17 = lgetv %str.2;
         %tmp.18 = getv function %tmp.17 :length;
         %tmp.19 = invoke %tmp.17 %tmp.18();
         %tmp.20 = lt %tmp.16 %tmp.19;
-        bf %tmp.20 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_begin:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_46_116_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 111 12 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_46_116_8_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_46_116_8_stop" ]
+        bf %tmp.20 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_begin:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_46_107_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 102 12 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_46_107_8_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_46_107_8_stop" ]
         %curChar.5 = local;
         %tmp.21 = lgetv %str.2;
         %tmp.22 = getv function %tmp.21 :substring;
@@ -496,85 +462,85 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_46_
         %tmp.28 = add %tmp.26 %tmp.27;
         %tmp.29 = invoke %tmp.21 %tmp.22(%tmp.24, %tmp.28);
         lputv %curChar.5 %tmp.29;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 112 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_12_114_12_if_stmt:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 103 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_12_105_12_if_stmt:
         %tmp.30 = lgetv %curChar.5;
         %tmp.31 = getv function %tmp.30 :equals;
         %tmp.32 = ".";
         %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
-        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_12_114_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_12_114_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_36_114_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 113 16 ]
-        goto break @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_36_114_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_12_114_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_12_114_12_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 115 12 ]
+        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_12_105_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_12_105_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_36_105_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 104 16 ]
+        goto break @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_36_105_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_12_105_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_103_12_105_12_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 106 12 ]
         %tmp.35 = lgetv %formattedString.3;
         %tmp.37 = lgetv %curChar.5;
         %tmp.38 = add %tmp.35 %tmp.37;
         lputv %formattedString.3 %tmp.38;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_46_116_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_incr:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 110 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_46_107_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_incr:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 101 ]
         %tmp.41 = lgetv %i.4;
         %tmp.42 = add %tmp.41 1;
         lputv %i.4 %tmp.42;
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_test;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_110_8_116_8_for_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 117 8 ]
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_test;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_101_8_107_8_for_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 108 8 ]
         %tmp.44 = lgetv %formattedString.3;
         ret %tmp.44;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_104_48_118_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_95_48_109_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 121; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 112; ]
     function getFormattedStringForNumber(num) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 123 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 114 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_stop" ]
         %numString.1 = local;
         %tmp.1 = lgetv %num;
         %tmp.2 = getv function %tmp.1 :toString;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = as %tmp.3 Toybox.Lang.String;
         lputv %numString.1 %tmp.4;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 124 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 115 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_stop" ]
         %stringLength.2 = local;
         %tmp.5 = lgetv %numString.1;
         %tmp.6 = getv function %tmp.5 :length;
         %tmp.7 = invoke %tmp.5 %tmp.6();
         lputv %stringLength.2 %tmp.7;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 125 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 116 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_stop" ]
         %formattedString.3 = local;
         %tmp.8 = "";
         lputv %formattedString.3 %tmp.8;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 127 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 118 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_stop" ]
         %maxIndex.4 = local;
         %tmp.10 = lgetv %stringLength.2;
         %tmp.11 = 1;
         %tmp.12 = sub %tmp.10 %tmp.11;
         lputv %maxIndex.4 %tmp.12;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 128 8 ]
-        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_init:
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_end" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 119 8 ]
+        for @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_test @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_incr @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_init:
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_begin" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_end" ]
         %i.5 = local;
         %tmp.14 = lgetv %maxIndex.4;
         lputv %i.5 %tmp.14;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_test:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_test:
         %tmp.16 = lgetv %i.5;
         %tmp.17 = 0;
         %tmp.18 = gte %tmp.16 %tmp.17;
-        bf %tmp.18 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_begin:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_44_136_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 130 12 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_stmt:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_16_130_53_begin:
+        bf %tmp.18 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_begin:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_44_127_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 121 12 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_stmt:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_16_121_53_begin:
         %tmp.20 = lgetv %stringLength.2;
         %tmp.22 = lgetv %i.5;
         %tmp.23 = sub %tmp.20 %tmp.22;
@@ -582,27 +548,27 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_16_
         %tmp.25 = mod %tmp.23 %tmp.24;
         %tmp.26 = 1;
         %tmp.27 = eq %tmp.25 %tmp.26;
-        bf %tmp.27 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_49_130_53_true:
+        bf %tmp.27 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_49_121_53_true:
         %tmp.29 = lgetv %i.5;
         %tmp.31 = lgetv %maxIndex.4;
         %tmp.32 = lt %tmp.29 %tmp.31;
         push %tmp.32;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_49_130_53_end:
-        %tmp.33 = phi [%tmp.27 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_16_130_53_begin] [%tmp.32 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_49_130_53_true] [%tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_49_130_53_end];
-        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_62_132_12_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 131 16 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_49_121_53_end:
+        %tmp.33 = phi [%tmp.27 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_16_121_53_begin] [%tmp.32 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_49_121_53_true] [%tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_49_121_53_end];
+        bf %tmp.33 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_62_123_12_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 122 16 ]
         %tmp.34 = ",";
         %tmp.36 = lgetv %formattedString.3;
         %tmp.37 = add %tmp.34 %tmp.36;
         lputv %formattedString.3 %tmp.37;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_62_132_12_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_132_12_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 134 12 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_44_136_8_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_44_136_8_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_62_123_12_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_12_123_12_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 125 12 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_44_127_8_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_44_127_8_stop" ]
         %curChar.6 = local;
         %tmp.38 = lgetv %numString.1;
         %tmp.39 = getv function %tmp.38 :substring;
@@ -612,23 +578,23 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_130_12_
         %tmp.45 = add %tmp.43 %tmp.44;
         %tmp.46 = invoke %tmp.38 %tmp.39(%tmp.41, %tmp.45);
         lputv %curChar.6 %tmp.46;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 135 12 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 126 12 ]
         %tmp.48 = lgetv %curChar.6;
         %tmp.50 = lgetv %formattedString.3;
         %tmp.51 = add %tmp.48 %tmp.50;
         lputv %formattedString.3 %tmp.51;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_44_136_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_incr:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 128 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_44_127_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_incr:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 119 ]
         %tmp.54 = lgetv %i.5;
         %tmp.55 = sub %tmp.54 1;
         lputv %i.5 %tmp.55;
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_test;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_128_8_136_8_for_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 138 8 ]
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_test;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_119_8_127_8_for_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 129 8 ]
         %tmp.57 = lgetv %formattedString.3;
         ret %tmp.57;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_121_52_139_4_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_112_52_130_4_stop:
     }
 }
 [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 1; ]

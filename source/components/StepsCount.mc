@@ -19,11 +19,11 @@ class StepsCount {
     function initialize(dc) {
         _screenWidth  = dc.getWidth();
         _screenHeight = dc.getHeight();
-        _tinyFont     = CommonMethods.getTinyFont(dc);
+        _tinyFont     = Graphics.FONT_TINY;
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _stepsX = _screenWidth / 3;
-        _stepsY = _screenHeight - 112;
+        _stepsY = _screenHeight - 136;
         _stepsPoints = [
                         [_stepsX - 100, _stepsY],
                         [_stepsX + 100, _stepsY],

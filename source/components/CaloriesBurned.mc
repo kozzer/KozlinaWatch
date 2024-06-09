@@ -17,11 +17,11 @@ class CaloriesBurned {
 
     function initialize(dc) {
         _screenHeight = dc.getHeight();
-        _tinyFont     = CommonMethods.getTinyFont(dc);
+        _tinyFont     = Graphics.FONT_TINY;
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _calsX = 2 * (dc.getWidth() / 3);
-        _calsY = _screenHeight - 112;
+        _calsY = _screenHeight - 136;
 
         _calsPoints = [
                         [_calsX - 100, _calsY],

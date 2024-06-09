@@ -21,7 +21,7 @@ class BatteryStatus {
     function initialize(dc){
         // Put it upper left
         _batteryX = dc.getWidth() / 2;
-        _batteryY = dc.getHeight() - 24;
+        _batteryY = dc.getHeight() - 18;
 
         _batXAdj = (_batteryWidth / 2) + 2;
 

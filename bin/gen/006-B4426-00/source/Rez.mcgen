@@ -7,6 +7,25 @@ using Toybox.Graphics as Gfx;
 module Rez {
     module Drawables {
         (:initialized) var BluetoothIcon as ResourceId;
+        (:initialized) var sunny_32 as ResourceId;
+        (:initialized) var cloudy_32 as ResourceId;
+        (:initialized) var partly_cloudy_32 as ResourceId;
+        (:initialized) var rain_32 as ResourceId;
+        (:initialized) var snow_32 as ResourceId;
+        (:initialized) var windy_32 as ResourceId;
+        (:initialized) var thunderstorm_32 as ResourceId;
+        (:initialized) var wintry_mix_32 as ResourceId;
+        (:initialized) var fog_32 as ResourceId;
+        (:initialized) var haze_32 as ResourceId;
+        (:initialized) var hail_32 as ResourceId;
+        (:initialized) var light_rain_32 as ResourceId;
+        (:initialized) var heavy_rain_32 as ResourceId;
+        (:initialized) var scattered_thunderstorms_32 as ResourceId;
+        (:initialized) var light_snow_32 as ResourceId;
+        (:initialized) var heavy_snow_32 as ResourceId;
+        (:initialized) var sleet_32 as ResourceId;
+        (:initialized) var mostly_cloudy_32 as ResourceId;
+        (:initialized) var rain_cloud_32 as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 

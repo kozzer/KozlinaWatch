@@ -50,7 +50,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_BatteryStatus_mc_2
         %tmp.6 = lgetv %dc;
         %tmp.7 = getv function %tmp.6 :getHeight;
         %tmp.8 = invoke %tmp.6 %tmp.7();
-        %tmp.9 = 24;
+        %tmp.9 = 18;
         %tmp.10 = sub %tmp.8 %tmp.9;
         putv self :_batteryY %tmp.10;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\BatteryStatus.mc" 26 8 ]

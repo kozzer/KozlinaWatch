@@ -19,15 +19,6 @@ module CommonMethods {
         dc.setColor(Theme.FONT_COLOR, Graphics.COLOR_TRANSPARENT);
     }
 
-    function getTinyFont(dc){
-        var width = dc.getWidth();
-        if (width < 240){
-            return Graphics.FONT_XTINY;
-        } else {
-            return Graphics.FONT_TINY;
-        }
-    }
-
     // Set the clip based on the passed-in set of coordinates
     function setDrawingClip(dc, rectanglePoints) {
         // Clear existing clip

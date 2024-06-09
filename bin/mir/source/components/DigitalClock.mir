@@ -62,99 +62,101 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_18
         %tmp.19 = invoke %tmp.17 %tmp.18();
         %tmp.20 = 2;
         %tmp.21 = div %tmp.19 %tmp.20;
-        putv self :_timeX %tmp.21;
+        %tmp.22 = 6;
+        %tmp.23 = sub %tmp.21 %tmp.22;
+        putv self :_timeX %tmp.23;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 24 8 ]
-        %tmp.22 = lgetv %dc;
-        %tmp.23 = getv function %tmp.22 :getHeight;
-        %tmp.24 = invoke %tmp.22 %tmp.23();
-        %tmp.25 = 2;
-        %tmp.26 = div %tmp.24 %tmp.25;
-        %tmp.27 = 80;
-        %tmp.28 = sub %tmp.26 %tmp.27;
-        putv self :_timeY %tmp.28;
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :getHeight;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = 2;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = 84;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        putv self :_timeY %tmp.30;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 26 8 ]
-        %tmp.29 = getm $.Toybox.Graphics;
-        %tmp.30 = getv function %tmp.29 :getFontHeight;
-        %tmp.32 = getv ? :_normalTimeFont;
-        %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.32);
-        %tmp.34 = 1;
-        %tmp.35 = add %tmp.33 %tmp.34;
-        putv self :_timeHeight %tmp.35;
+        %tmp.31 = getm $.Toybox.Graphics;
+        %tmp.32 = getv function %tmp.31 :getFontHeight;
+        %tmp.34 = getv ? :_normalTimeFont;
+        %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+        %tmp.36 = 1;
+        %tmp.37 = add %tmp.35 %tmp.36;
+        putv self :_timeHeight %tmp.37;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 27 8 ]
-        %tmp.36 = newa 4;
-        %tmp.37 = newa 2;
-        %tmp.39 = getv ? :_timeX;
-        %tmp.40 = 150;
-        %tmp.41 = sub %tmp.39 %tmp.40;
-        %tmp.42 = dup %tmp.37;
-        %tmp.43 = aputv %tmp.42 0 %tmp.41;
-        %tmp.45 = getv ? :_timeY;
-        %tmp.46 = dup %tmp.43;
-        %tmp.47 = aputv %tmp.46 1 %tmp.45;
-        %tmp.48 = dup %tmp.36;
-        %tmp.49 = aputv %tmp.48 0 %tmp.47;
-        %tmp.50 = newa 2;
-        %tmp.52 = getv ? :_timeX;
-        %tmp.53 = 150;
-        %tmp.54 = add %tmp.52 %tmp.53;
-        %tmp.55 = dup %tmp.50;
-        %tmp.56 = aputv %tmp.55 0 %tmp.54;
-        %tmp.58 = getv ? :_timeY;
-        %tmp.59 = dup %tmp.56;
-        %tmp.60 = aputv %tmp.59 1 %tmp.58;
-        %tmp.61 = dup %tmp.49;
+        %tmp.38 = newa 4;
+        %tmp.39 = newa 2;
+        %tmp.41 = getv ? :_timeX;
+        %tmp.42 = 150;
+        %tmp.43 = sub %tmp.41 %tmp.42;
+        %tmp.44 = dup %tmp.39;
+        %tmp.45 = aputv %tmp.44 0 %tmp.43;
+        %tmp.47 = getv ? :_timeY;
+        %tmp.48 = dup %tmp.45;
+        %tmp.49 = aputv %tmp.48 1 %tmp.47;
+        %tmp.50 = dup %tmp.38;
+        %tmp.51 = aputv %tmp.50 0 %tmp.49;
+        %tmp.52 = newa 2;
+        %tmp.54 = getv ? :_timeX;
+        %tmp.55 = 150;
+        %tmp.56 = add %tmp.54 %tmp.55;
+        %tmp.57 = dup %tmp.52;
+        %tmp.58 = aputv %tmp.57 0 %tmp.56;
+        %tmp.60 = getv ? :_timeY;
+        %tmp.61 = dup %tmp.58;
         %tmp.62 = aputv %tmp.61 1 %tmp.60;
-        %tmp.63 = newa 2;
-        %tmp.65 = getv ? :_timeX;
-        %tmp.66 = 150;
-        %tmp.67 = add %tmp.65 %tmp.66;
-        %tmp.68 = dup %tmp.63;
-        %tmp.69 = aputv %tmp.68 0 %tmp.67;
-        %tmp.71 = getv ? :_timeY;
-        %tmp.73 = getv ? :_timeHeight;
-        %tmp.74 = add %tmp.71 %tmp.73;
-        %tmp.75 = dup %tmp.69;
-        %tmp.76 = aputv %tmp.75 1 %tmp.74;
-        %tmp.77 = dup %tmp.62;
-        %tmp.78 = aputv %tmp.77 2 %tmp.76;
-        %tmp.79 = newa 2;
-        %tmp.81 = getv ? :_timeX;
-        %tmp.82 = 150;
-        %tmp.83 = sub %tmp.81 %tmp.82;
-        %tmp.84 = dup %tmp.79;
-        %tmp.85 = aputv %tmp.84 0 %tmp.83;
-        %tmp.87 = getv ? :_timeY;
-        %tmp.89 = getv ? :_timeHeight;
-        %tmp.90 = add %tmp.87 %tmp.89;
-        %tmp.91 = dup %tmp.85;
-        %tmp.92 = aputv %tmp.91 1 %tmp.90;
-        %tmp.93 = dup %tmp.78;
-        %tmp.94 = aputv %tmp.93 3 %tmp.92;
-        putv self :_timePoints %tmp.94;
+        %tmp.63 = dup %tmp.51;
+        %tmp.64 = aputv %tmp.63 1 %tmp.62;
+        %tmp.65 = newa 2;
+        %tmp.67 = getv ? :_timeX;
+        %tmp.68 = 150;
+        %tmp.69 = add %tmp.67 %tmp.68;
+        %tmp.70 = dup %tmp.65;
+        %tmp.71 = aputv %tmp.70 0 %tmp.69;
+        %tmp.73 = getv ? :_timeY;
+        %tmp.75 = getv ? :_timeHeight;
+        %tmp.76 = add %tmp.73 %tmp.75;
+        %tmp.77 = dup %tmp.71;
+        %tmp.78 = aputv %tmp.77 1 %tmp.76;
+        %tmp.79 = dup %tmp.64;
+        %tmp.80 = aputv %tmp.79 2 %tmp.78;
+        %tmp.81 = newa 2;
+        %tmp.83 = getv ? :_timeX;
+        %tmp.84 = 150;
+        %tmp.85 = sub %tmp.83 %tmp.84;
+        %tmp.86 = dup %tmp.81;
+        %tmp.87 = aputv %tmp.86 0 %tmp.85;
+        %tmp.89 = getv ? :_timeY;
+        %tmp.91 = getv ? :_timeHeight;
+        %tmp.92 = add %tmp.89 %tmp.91;
+        %tmp.93 = dup %tmp.87;
+        %tmp.94 = aputv %tmp.93 1 %tmp.92;
+        %tmp.95 = dup %tmp.80;
+        %tmp.96 = aputv %tmp.95 3 %tmp.94;
+        putv self :_timePoints %tmp.96;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_18_28_34_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc"; @line = 39; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc"; @line = 37; ]
     function drawOnScreen(dc, isAwake) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 42 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 40 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
         %timeX.1 = local;
         %tmp.2 = getv ? :_timeX;
         lputv %timeX.1 %tmp.2;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 43 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 41 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
         %timeY.2 = local;
         %tmp.4 = getv ? :_timeY;
         lputv %timeY.2 %tmp.4;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 47 8 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_8_50_8_if_stmt:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 45 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_8_48_8_if_stmt:
         %tmp.6 = lgetv %isAwake;
         %tmp.7 = false;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_8_50_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_8_50_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_29_50_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 48 12 ]
+        bf %tmp.8 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_8_48_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_8_48_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_29_48_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 46 12 ]
         %tmp.10 = lgetv %timeX.1;
         %tmp.12 = getv ? :Math;
         %tmp.13 = getv function %tmp.12 :rand;
@@ -165,7 +167,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47
         %tmp.18 = 1;
         %tmp.19 = add %tmp.17 %tmp.18;
         lputv %timeX.1 %tmp.19;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 49 12 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 47 12 ]
         %tmp.21 = lgetv %timeY.2;
         %tmp.23 = getv ? :Math;
         %tmp.24 = getv function %tmp.23 :rand;
@@ -176,11 +178,11 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47
         %tmp.29 = 1;
         %tmp.30 = add %tmp.28 %tmp.29;
         lputv %timeY.2 %tmp.30;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_29_50_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_8_50_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47_8_50_8_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 52 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_29_48_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_8_48_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_45_8_48_8_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 50 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
         %greg.3 = local;
         %tmp.31 = getm $.Toybox.Time.Gregorian;
         %tmp.32 = getv function %tmp.31 :info;
@@ -191,223 +193,253 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_47
         %tmp.37 = getv %tmp.36 :FORMAT_SHORT;
         %tmp.38 = invoke %tmp.31 %tmp.32(%tmp.35, %tmp.37);
         lputv %greg.3 %tmp.38;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 55 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %hour.4 = local;
-        %tmp.39 = lgetv %greg.3;
-        %tmp.40 = getv %tmp.39 :hour;
-        lputv %hour.4 %tmp.40;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 56 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 51 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
+        %timeStr.4 = local;
+        %tmp.39 = self;
+        %tmp.40 = getv function %tmp.39 :getTimeString;
+        %tmp.42 = lgetv %greg.3;
+        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
+        lputv %timeStr.4 %tmp.43;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 52 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
         %ampm.5 = local;
-        %tmp.41 = "AM";
-        lputv %ampm.5 %tmp.41;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 57 8 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_stmt:
-        %tmp.43 = lgetv %hour.4;
-        %tmp.44 = 0;
-        %tmp.45 = eq %tmp.43 %tmp.44;
-        bf %tmp.45 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_22_59_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 58 12 ]
-        %tmp.46 = 12;
-        lputv %hour.4 %tmp.46;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_22_59_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 59 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_stmt:
-        %tmp.48 = lgetv %hour.4;
-        %tmp.49 = 12;
-        %tmp.50 = eq %tmp.48 %tmp.49;
-        bf %tmp.50 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_30_61_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 60 12 ]
-        %tmp.51 = "PM";
-        lputv %ampm.5 %tmp.51;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_30_61_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_false:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 61 15 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_15_64_8_if_stmt:
-        %tmp.53 = lgetv %hour.4;
-        %tmp.54 = 12;
-        %tmp.55 = gt %tmp.53 %tmp.54;
-        bf %tmp.55 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_15_64_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_15_64_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_29_64_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 62 12 ]
-        %tmp.57 = lgetv %hour.4;
-        %tmp.58 = 12;
-        %tmp.59 = sub %tmp.57 %tmp.58;
-        lputv %hour.4 %tmp.59;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 63 12 ]
-        %tmp.60 = "PM";
-        lputv %ampm.5 %tmp.60;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_29_64_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_15_64_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_61_15_64_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_59_15_64_8_if_end:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_57_8_64_8_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 66 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %hourString.6 = local;
-        %tmp.61 = lgetv %hour.4;
-        %tmp.62 = getv function %tmp.61 :format;
-        %tmp.63 = "%1d";
-        %tmp.64 = invoke %tmp.61 %tmp.62(%tmp.63);
-        lputv %hourString.6 %tmp.64;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 67 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %minString.7 = local;
-        %tmp.65 = lgetv %greg.3;
-        %tmp.66 = getv %tmp.65 :min;
-        %tmp.67 = getv function %tmp.66 :format;
-        %tmp.68 = "%02d";
-        %tmp.69 = invoke %tmp.66 %tmp.67(%tmp.68);
-        lputv %minString.7 %tmp.69;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 68 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %timeStr.8 = local;
-        %tmp.71 = lgetv %hourString.6;
-        %tmp.72 = ":";
-        %tmp.73 = add %tmp.71 %tmp.72;
-        %tmp.75 = lgetv %minString.7;
-        %tmp.76 = add %tmp.73 %tmp.75;
-        lputv %timeStr.8 %tmp.76;
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :getAmPmString;
+        %tmp.46 = lgetv %greg.3;
+        %tmp.47 = getv %tmp.46 :hour;
+        %tmp.48 = invoke %tmp.44 %tmp.45(%tmp.47);
+        lputv %ampm.5 %tmp.48;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 54 8 ]
+        %tmp.50 = getv ? :CommonMethods;
+        %tmp.51 = getv function %tmp.50 :setDrawingClip;
+        %tmp.53 = lgetv %dc;
+        %tmp.55 = getv ? :_timePoints;
+        invoke %tmp.50 %tmp.51(%tmp.53, %tmp.55);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 56 8 ]
+        %tmp.57 = getv ? :CommonMethods;
+        %tmp.58 = getv function %tmp.57 :resetColorsForRendering;
+        %tmp.60 = lgetv %dc;
+        invoke %tmp.57 %tmp.58(%tmp.60);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 58 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_stmt:
+        %tmp.62 = lgetv %isAwake;
+        bf %tmp.62 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_20_63_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 61 12 ]
+        %tmp.63 = lgetv %dc;
+        %tmp.64 = getv function %tmp.63 :drawText;
+        %tmp.66 = lgetv %timeX.1;
+        %tmp.68 = lgetv %timeY.2;
+        %tmp.70 = getv ? :_normalTimeFont;
+        %tmp.72 = lgetv %timeStr.4;
+        %tmp.73 = getm $.Toybox.Graphics;
+        %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.63 %tmp.64(%tmp.66, %tmp.68, %tmp.70, %tmp.72, %tmp.74);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_20_63_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_false:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_63_15_67_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 66 12 ]
+        %tmp.75 = lgetv %dc;
+        %tmp.76 = getv function %tmp.75 :drawText;
+        %tmp.78 = lgetv %timeX.1;
+        %tmp.80 = lgetv %timeY.2;
+        %tmp.82 = getv ? :_lightTimeFont;
+        %tmp.84 = lgetv %timeStr.4;
+        %tmp.85 = getm $.Toybox.Graphics;
+        %tmp.86 = getv %tmp.85 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.75 %tmp.76(%tmp.78, %tmp.80, %tmp.82, %tmp.84, %tmp.86);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_63_15_67_8_stop:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_58_8_67_8_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 69 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
+        %ampmX.6 = local;
+        %tmp.88 = lgetv %timeX.1;
+        %tmp.89 = 112;
+        %tmp.90 = add %tmp.88 %tmp.89;
+        lputv %ampmX.6 %tmp.90;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 70 8 ]
-        %tmp.78 = getv ? :CommonMethods;
-        %tmp.79 = getv function %tmp.78 :setDrawingClip;
-        %tmp.81 = lgetv %dc;
-        %tmp.83 = getv ? :_timePoints;
-        invoke %tmp.78 %tmp.79(%tmp.81, %tmp.83);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 72 8 ]
-        %tmp.85 = getv ? :CommonMethods;
-        %tmp.86 = getv function %tmp.85 :resetColorsForRendering;
-        %tmp.88 = lgetv %dc;
-        invoke %tmp.85 %tmp.86(%tmp.88);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 74 8 ]
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_stmt:
-        %tmp.90 = lgetv %isAwake;
-        bf %tmp.90 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_false;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_true:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_20_79_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 77 12 ]
-        %tmp.91 = lgetv %dc;
-        %tmp.92 = getv function %tmp.91 :drawText;
-        %tmp.94 = lgetv %timeX.1;
-        %tmp.96 = lgetv %timeY.2;
-        %tmp.98 = getv ? :_normalTimeFont;
-        %tmp.100 = lgetv %timeStr.8;
-        %tmp.101 = getm $.Toybox.Graphics;
-        %tmp.102 = getv %tmp.101 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96, %tmp.98, %tmp.100, %tmp.102);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_20_79_8_stop:
-        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_end;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_false:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_79_15_83_8_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 82 12 ]
-        %tmp.103 = lgetv %dc;
-        %tmp.104 = getv function %tmp.103 :drawText;
-        %tmp.106 = lgetv %timeX.1;
-        %tmp.108 = lgetv %timeY.2;
-        %tmp.110 = getv ? :_lightTimeFont;
-        %tmp.112 = lgetv %timeStr.8;
-        %tmp.113 = getm $.Toybox.Graphics;
-        %tmp.114 = getv %tmp.113 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.103 %tmp.104(%tmp.106, %tmp.108, %tmp.110, %tmp.112, %tmp.114);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_79_15_83_8_stop:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_74_8_83_8_if_end:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 85 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %ampmX.9 = local;
-        %tmp.116 = lgetv %timeX.1;
-        %tmp.117 = 112;
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
+        %ampmY.7 = local;
+        %tmp.92 = lgetv %timeY.2;
+        %tmp.94 = getv ? :_timeHeight;
+        %tmp.95 = 0.54;
+        %tmp.96 = mul %tmp.94 %tmp.95;
+        %tmp.97 = add %tmp.92 %tmp.96;
+        lputv %ampmY.7 %tmp.97;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 71 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop" ]
+        %ampmPoints.8 = local;
+        %tmp.98 = newa 4;
+        %tmp.99 = newa 2;
+        %tmp.101 = lgetv %ampmX.6;
+        %tmp.102 = dup %tmp.99;
+        %tmp.103 = aputv %tmp.102 0 %tmp.101;
+        %tmp.105 = lgetv %ampmY.7;
+        %tmp.106 = dup %tmp.103;
+        %tmp.107 = aputv %tmp.106 1 %tmp.105;
+        %tmp.108 = dup %tmp.98;
+        %tmp.109 = aputv %tmp.108 0 %tmp.107;
+        %tmp.110 = newa 2;
+        %tmp.112 = lgetv %ampmX.6;
+        %tmp.113 = dup %tmp.110;
+        %tmp.114 = aputv %tmp.113 0 %tmp.112;
+        %tmp.116 = lgetv %ampmY.7;
+        %tmp.117 = 100;
         %tmp.118 = add %tmp.116 %tmp.117;
-        lputv %ampmX.9 %tmp.118;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 86 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %ampmY.10 = local;
-        %tmp.120 = lgetv %timeY.2;
-        %tmp.122 = getv ? :_timeHeight;
-        %tmp.123 = 0.54;
-        %tmp.124 = mul %tmp.122 %tmp.123;
-        %tmp.125 = add %tmp.120 %tmp.124;
-        lputv %ampmY.10 %tmp.125;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 87 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop" ]
-        %ampmPoints.11 = local;
-        %tmp.126 = newa 4;
-        %tmp.127 = newa 2;
-        %tmp.129 = lgetv %ampmX.9;
-        %tmp.130 = dup %tmp.127;
-        %tmp.131 = aputv %tmp.130 0 %tmp.129;
-        %tmp.133 = lgetv %ampmY.10;
-        %tmp.134 = dup %tmp.131;
+        %tmp.119 = dup %tmp.114;
+        %tmp.120 = aputv %tmp.119 1 %tmp.118;
+        %tmp.121 = dup %tmp.109;
+        %tmp.122 = aputv %tmp.121 1 %tmp.120;
+        %tmp.123 = newa 2;
+        %tmp.125 = lgetv %ampmX.6;
+        %tmp.126 = 100;
+        %tmp.127 = add %tmp.125 %tmp.126;
+        %tmp.128 = dup %tmp.123;
+        %tmp.129 = aputv %tmp.128 0 %tmp.127;
+        %tmp.131 = lgetv %ampmY.7;
+        %tmp.132 = 100;
+        %tmp.133 = add %tmp.131 %tmp.132;
+        %tmp.134 = dup %tmp.129;
         %tmp.135 = aputv %tmp.134 1 %tmp.133;
-        %tmp.136 = dup %tmp.126;
-        %tmp.137 = aputv %tmp.136 0 %tmp.135;
+        %tmp.136 = dup %tmp.122;
+        %tmp.137 = aputv %tmp.136 2 %tmp.135;
         %tmp.138 = newa 2;
-        %tmp.140 = lgetv %ampmX.9;
-        %tmp.141 = dup %tmp.138;
-        %tmp.142 = aputv %tmp.141 0 %tmp.140;
-        %tmp.144 = lgetv %ampmY.10;
-        %tmp.145 = 100;
-        %tmp.146 = add %tmp.144 %tmp.145;
-        %tmp.147 = dup %tmp.142;
+        %tmp.140 = lgetv %ampmX.6;
+        %tmp.141 = 100;
+        %tmp.142 = add %tmp.140 %tmp.141;
+        %tmp.143 = dup %tmp.138;
+        %tmp.144 = aputv %tmp.143 0 %tmp.142;
+        %tmp.146 = lgetv %ampmY.7;
+        %tmp.147 = dup %tmp.144;
         %tmp.148 = aputv %tmp.147 1 %tmp.146;
         %tmp.149 = dup %tmp.137;
-        %tmp.150 = aputv %tmp.149 1 %tmp.148;
-        %tmp.151 = newa 2;
-        %tmp.153 = lgetv %ampmX.9;
-        %tmp.154 = 100;
-        %tmp.155 = add %tmp.153 %tmp.154;
-        %tmp.156 = dup %tmp.151;
-        %tmp.157 = aputv %tmp.156 0 %tmp.155;
-        %tmp.159 = lgetv %ampmY.10;
-        %tmp.160 = 100;
-        %tmp.161 = add %tmp.159 %tmp.160;
-        %tmp.162 = dup %tmp.157;
-        %tmp.163 = aputv %tmp.162 1 %tmp.161;
-        %tmp.164 = dup %tmp.150;
-        %tmp.165 = aputv %tmp.164 2 %tmp.163;
-        %tmp.166 = newa 2;
-        %tmp.168 = lgetv %ampmX.9;
-        %tmp.169 = 100;
-        %tmp.170 = add %tmp.168 %tmp.169;
-        %tmp.171 = dup %tmp.166;
-        %tmp.172 = aputv %tmp.171 0 %tmp.170;
-        %tmp.174 = lgetv %ampmY.10;
-        %tmp.175 = dup %tmp.172;
-        %tmp.176 = aputv %tmp.175 1 %tmp.174;
-        %tmp.177 = dup %tmp.165;
-        %tmp.178 = aputv %tmp.177 3 %tmp.176;
-        lputv %ampmPoints.11 %tmp.178;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 89 8 ]
-        %tmp.180 = getv ? :CommonMethods;
-        %tmp.181 = getv function %tmp.180 :setDrawingClip;
-        %tmp.183 = lgetv %dc;
-        %tmp.185 = lgetv %ampmPoints.11;
-        invoke %tmp.180 %tmp.181(%tmp.183, %tmp.185);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 93 12 ]
-        %tmp.186 = lgetv %dc;
-        %tmp.187 = getv function %tmp.186 :drawText;
-        %tmp.189 = lgetv %ampmX.9;
-        %tmp.191 = lgetv %ampmY.10;
-        %tmp.192 = getm $.Toybox.Graphics;
-        %tmp.193 = getv %tmp.192 :FONT_GLANCE_NUMBER;
-        %tmp.195 = lgetv %ampm.5;
-        %tmp.196 = getm $.Toybox.Graphics;
-        %tmp.197 = getv %tmp.196 :TEXT_JUSTIFY_LEFT;
-        invoke %tmp.186 %tmp.187(%tmp.189, %tmp.191, %tmp.193, %tmp.195, %tmp.197);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 96 8 ]
-        %tmp.199 = getv ? :CommonMethods;
-        %tmp.200 = getv function %tmp.199 :clearDrawingClip;
-        %tmp.202 = lgetv %dc;
-        invoke %tmp.199 %tmp.200(%tmp.202);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_39_39_97_4_stop:
+        %tmp.150 = aputv %tmp.149 3 %tmp.148;
+        lputv %ampmPoints.8 %tmp.150;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 73 8 ]
+        %tmp.152 = getv ? :CommonMethods;
+        %tmp.153 = getv function %tmp.152 :setDrawingClip;
+        %tmp.155 = lgetv %dc;
+        %tmp.157 = lgetv %ampmPoints.8;
+        invoke %tmp.152 %tmp.153(%tmp.155, %tmp.157);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 76 8 ]
+        %tmp.158 = lgetv %dc;
+        %tmp.159 = getv function %tmp.158 :drawText;
+        %tmp.161 = lgetv %ampmX.6;
+        %tmp.163 = lgetv %ampmY.7;
+        %tmp.164 = getm $.Toybox.Graphics;
+        %tmp.165 = getv %tmp.164 :FONT_GLANCE_NUMBER;
+        %tmp.167 = lgetv %ampm.5;
+        %tmp.168 = getm $.Toybox.Graphics;
+        %tmp.169 = getv %tmp.168 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.158 %tmp.159(%tmp.161, %tmp.163, %tmp.165, %tmp.167, %tmp.169);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 78 8 ]
+        %tmp.171 = getv ? :CommonMethods;
+        %tmp.172 = getv function %tmp.171 :clearDrawingClip;
+        %tmp.174 = lgetv %dc;
+        invoke %tmp.171 %tmp.172(%tmp.174);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_37_39_79_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc"; @line = 81; ]
+    private
+    function getTimeString(greg) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 83 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_stop" ]
+        %hourString.1 = local;
+        %tmp.1 = lgetv %greg;
+        %tmp.2 = getv %tmp.1 :hour;
+        %tmp.3 = getv function %tmp.2 :format;
+        %tmp.4 = "%1d";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %hourString.1 %tmp.5;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 84 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_stop" ]
+        %minString.2 = local;
+        %tmp.6 = lgetv %greg;
+        %tmp.7 = getv %tmp.6 :min;
+        %tmp.8 = getv function %tmp.7 :format;
+        %tmp.9 = "%02d";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        lputv %minString.2 %tmp.10;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 85 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_stop" ]
+        %timeStr.3 = local;
+        %tmp.12 = lgetv %hourString.1;
+        %tmp.13 = ":";
+        %tmp.14 = add %tmp.12 %tmp.13;
+        %tmp.16 = lgetv %minString.2;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        lputv %timeStr.3 %tmp.17;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 87 8 ]
+        %tmp.19 = lgetv %timeStr.3;
+        ret %tmp.19;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_81_40_88_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc"; @line = 90; ]
+    private
+    function getAmPmString(hour) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_90_40_109_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 92 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_90_40_109_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_90_40_109_4_stop" ]
+        %ampm.1 = local;
+        %tmp.1 = "AM";
+        lputv %ampm.1 %tmp.1;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 93 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_stmt:
+        %tmp.3 = lgetv %hour;
+        %tmp.4 = 0;
+        %tmp.5 = eq %tmp.3 %tmp.4;
+        bf %tmp.5 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_22_97_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 95 12 ]
+        %tmp.6 = 12;
+        lputv %hour %tmp.6;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_22_97_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 97 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_stmt:
+        %tmp.8 = lgetv %hour;
+        %tmp.9 = 12;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_false;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_30_101_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 99 12 ]
+        %tmp.11 = "PM";
+        lputv %ampm.1 %tmp.11;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_30_101_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_false:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 101 15 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_15_106_8_if_stmt:
+        %tmp.13 = lgetv %hour;
+        %tmp.14 = 12;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_15_106_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_15_106_8_if_true:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_29_106_8_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 103 12 ]
+        %tmp.17 = lgetv %hour;
+        %tmp.18 = 12;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        lputv %hour %tmp.19;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 104 12 ]
+        %tmp.20 = "PM";
+        lputv %ampm.1 %tmp.20;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_29_106_8_stop:
+        goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_15_106_8_if_end;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_101_15_106_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_97_15_106_8_if_end:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_93_8_106_8_if_end:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc" 108 8 ]
+        %tmp.22 = lgetv %ampm.1;
+        ret %tmp.22;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_DigitalClock_mc_90_40_109_4_stop:
     }
 }
 [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\DigitalClock.mc"; @line = 1; ]

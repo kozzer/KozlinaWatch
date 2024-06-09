@@ -8,7 +8,7 @@ using ThemeController as Theme;
 
 class DateTitle {
 
-    private const _dateFont = Graphics.FONT_LARGE;
+    private const _dateFont = Graphics.FONT_MEDIUM;
     private var _dateX;
     private var _dateY;
 
@@ -16,7 +16,7 @@ class DateTitle {
 
     function initialize(dc) {
         _dateX = dc.getWidth() / 2;
-        _dateY = 6;
+        _dateY = 2;
 
         var dateHeight = Graphics.getFontHeight(_dateFont) + 1;
 

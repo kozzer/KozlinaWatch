@@ -20,7 +20,7 @@ class Weather{
     var _screenWidth;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 10; @position = 16; ]
     private
-    var _tinyFont;
+    var _veryTinyFont;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 11; @position = 16; ]
     private
     var _fontHeight;
@@ -36,197 +36,245 @@ class Weather{
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 17; @position = 16; ]
     private
     var _weatherPoints;
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 19; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 18; @position = 16; ]
+    private
+    var _weatherIcon;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 20; ]
     function initialize(dc) as Void {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_19_28_34_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 20 8 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_20_28_38_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 21 8 ]
         %tmp.1 = lgetv %dc;
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         putv self :_screenWidth %tmp.3;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 21 8 ]
-        %tmp.5 = getv ? :CommonMethods;
-        %tmp.6 = getv function %tmp.5 :getTinyFont;
-        %tmp.8 = lgetv %dc;
-        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
-        putv self :_tinyFont %tmp.9;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 22 8 ]
-        %tmp.10 = getm $.Toybox.Graphics;
-        %tmp.11 = getv function %tmp.10 :getFontHeight;
-        %tmp.13 = getv ? :_tinyFont;
-        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
-        putv self :_fontHeight %tmp.14;
+        %tmp.4 = getm $.Toybox.Graphics;
+        %tmp.5 = getv %tmp.4 :FONT_SYSTEM_XTINY;
+        putv self :_veryTinyFont %tmp.5;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 23 8 ]
-        %tmp.16 = getv ? :_fontHeight;
-        %tmp.17 = 2;
-        %tmp.18 = mul %tmp.16 %tmp.17;
-        %tmp.19 = 6;
-        %tmp.20 = add %tmp.18 %tmp.19;
-        putv self :_widgetHeight %tmp.20;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 25 8 ]
-        %tmp.22 = getv ? :_screenWidth;
-        %tmp.23 = 2;
-        %tmp.24 = div %tmp.22 %tmp.23;
-        %tmp.25 = 64;
-        %tmp.26 = sub %tmp.24 %tmp.25;
-        putv self :_weatherX %tmp.26;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv function %tmp.6 :getFontHeight;
+        %tmp.9 = getv ? :_veryTinyFont;
+        %tmp.10 = invoke %tmp.6 %tmp.7(%tmp.9);
+        putv self :_fontHeight %tmp.10;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 24 8 ]
+        %tmp.12 = getv ? :_fontHeight;
+        %tmp.13 = 2;
+        %tmp.14 = mul %tmp.12 %tmp.13;
+        %tmp.15 = 6;
+        %tmp.16 = add %tmp.14 %tmp.15;
+        putv self :_widgetHeight %tmp.16;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 26 8 ]
-        %tmp.27 = 84;
-        putv self :_weatherY %tmp.27;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 28 8 ]
-        %tmp.28 = newa 4;
-        %tmp.29 = newa 2;
-        %tmp.31 = getv ? :_weatherX;
+        %tmp.18 = getv ? :_screenWidth;
+        %tmp.19 = 2;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        %tmp.21 = 72;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        putv self :_weatherX %tmp.22;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 27 8 ]
+        %tmp.23 = 64;
+        putv self :_weatherY %tmp.23;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 29 8 ]
+        %tmp.24 = newa 4;
+        %tmp.25 = newa 2;
+        %tmp.27 = getv ? :_weatherX;
+        %tmp.28 = dup %tmp.25;
+        %tmp.29 = aputv %tmp.28 0 %tmp.27;
+        %tmp.31 = getv ? :_weatherY;
         %tmp.32 = dup %tmp.29;
-        %tmp.33 = aputv %tmp.32 0 %tmp.31;
-        %tmp.35 = getv ? :_weatherY;
-        %tmp.36 = dup %tmp.33;
-        %tmp.37 = aputv %tmp.36 1 %tmp.35;
-        %tmp.38 = dup %tmp.28;
-        %tmp.39 = aputv %tmp.38 0 %tmp.37;
-        %tmp.40 = newa 2;
-        %tmp.42 = getv ? :_weatherX;
-        %tmp.43 = 128;
-        %tmp.44 = add %tmp.42 %tmp.43;
-        %tmp.45 = dup %tmp.40;
-        %tmp.46 = aputv %tmp.45 0 %tmp.44;
-        %tmp.48 = getv ? :_weatherY;
-        %tmp.49 = dup %tmp.46;
-        %tmp.50 = aputv %tmp.49 1 %tmp.48;
-        %tmp.51 = dup %tmp.39;
-        %tmp.52 = aputv %tmp.51 1 %tmp.50;
-        %tmp.53 = newa 2;
-        %tmp.55 = getv ? :_weatherX;
-        %tmp.56 = 128;
-        %tmp.57 = add %tmp.55 %tmp.56;
-        %tmp.58 = dup %tmp.53;
-        %tmp.59 = aputv %tmp.58 0 %tmp.57;
-        %tmp.61 = getv ? :_weatherY;
-        %tmp.63 = getv ? :_widgetHeight;
-        %tmp.64 = add %tmp.61 %tmp.63;
-        %tmp.65 = dup %tmp.59;
-        %tmp.66 = aputv %tmp.65 1 %tmp.64;
-        %tmp.67 = dup %tmp.52;
-        %tmp.68 = aputv %tmp.67 2 %tmp.66;
-        %tmp.69 = newa 2;
-        %tmp.71 = getv ? :_weatherX;
-        %tmp.72 = dup %tmp.69;
-        %tmp.73 = aputv %tmp.72 0 %tmp.71;
-        %tmp.75 = getv ? :_weatherY;
-        %tmp.77 = getv ? :_widgetHeight;
-        %tmp.78 = add %tmp.75 %tmp.77;
-        %tmp.79 = dup %tmp.73;
-        %tmp.80 = aputv %tmp.79 1 %tmp.78;
-        %tmp.81 = dup %tmp.68;
-        %tmp.82 = aputv %tmp.81 3 %tmp.80;
-        putv self :_weatherPoints %tmp.82;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_19_28_34_4_stop:
+        %tmp.33 = aputv %tmp.32 1 %tmp.31;
+        %tmp.34 = dup %tmp.24;
+        %tmp.35 = aputv %tmp.34 0 %tmp.33;
+        %tmp.36 = newa 2;
+        %tmp.38 = getv ? :_weatherX;
+        %tmp.39 = 144;
+        %tmp.40 = add %tmp.38 %tmp.39;
+        %tmp.41 = dup %tmp.36;
+        %tmp.42 = aputv %tmp.41 0 %tmp.40;
+        %tmp.44 = getv ? :_weatherY;
+        %tmp.45 = dup %tmp.42;
+        %tmp.46 = aputv %tmp.45 1 %tmp.44;
+        %tmp.47 = dup %tmp.35;
+        %tmp.48 = aputv %tmp.47 1 %tmp.46;
+        %tmp.49 = newa 2;
+        %tmp.51 = getv ? :_weatherX;
+        %tmp.52 = 144;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.54 = dup %tmp.49;
+        %tmp.55 = aputv %tmp.54 0 %tmp.53;
+        %tmp.57 = getv ? :_weatherY;
+        %tmp.59 = getv ? :_widgetHeight;
+        %tmp.60 = add %tmp.57 %tmp.59;
+        %tmp.61 = dup %tmp.55;
+        %tmp.62 = aputv %tmp.61 1 %tmp.60;
+        %tmp.63 = dup %tmp.48;
+        %tmp.64 = aputv %tmp.63 2 %tmp.62;
+        %tmp.65 = newa 2;
+        %tmp.67 = getv ? :_weatherX;
+        %tmp.68 = dup %tmp.65;
+        %tmp.69 = aputv %tmp.68 0 %tmp.67;
+        %tmp.71 = getv ? :_weatherY;
+        %tmp.73 = getv ? :_widgetHeight;
+        %tmp.74 = add %tmp.71 %tmp.73;
+        %tmp.75 = dup %tmp.69;
+        %tmp.76 = aputv %tmp.75 1 %tmp.74;
+        %tmp.77 = dup %tmp.64;
+        %tmp.78 = aputv %tmp.77 3 %tmp.76;
+        putv self :_weatherPoints %tmp.78;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 37 8 ]
+        %tmp.79 = getm $.Toybox.WatchUi;
+        %tmp.80 = getv function %tmp.79 :loadResource;
+        %tmp.82 = getv ? :Rez;
+        %tmp.83 = getv %tmp.82 :Drawables;
+        %tmp.84 = getv %tmp.83 :rain_cloud_32;
+        %tmp.85 = invoke %tmp.79 %tmp.80(%tmp.84);
+        putv self :_weatherIcon %tmp.85;
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_20_28_38_4_stop:
     }
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 36; ]
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 40; ]
     function drawOnScreen(dc, info) {
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_start:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 39 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_stop" ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 43 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_stop" ]
         %conditions.1 = local;
         %tmp.1 = lgetv %info;
         %tmp.2 = getv %tmp.1 :Weather;
         %tmp.3 = getv function %tmp.2 :getCurrentConditions;
         %tmp.4 = invoke %tmp.2 %tmp.3();
         lputv %conditions.1 %tmp.4;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 41 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_stop" ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 45 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_stop" ]
         %currentTemp.2 = local;
         %tmp.6 = getv ? :CommonMethods;
         %tmp.7 = getv function %tmp.6 :convertToFahrenheit;
         %tmp.8 = lgetv %conditions.1;
         %tmp.9 = getv %tmp.8 :temperature;
         %tmp.10 = invoke %tmp.6 %tmp.7(%tmp.9);
-        lputv %currentTemp.2 %tmp.10;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 42 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_stop" ]
+        %tmp.11 = getv function %tmp.10 :toString;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = "°";
+        %tmp.14 = add %tmp.12 %tmp.13;
+        lputv %currentTemp.2 %tmp.14;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 46 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_stop" ]
         %highTemp.3 = local;
-        %tmp.12 = getv ? :CommonMethods;
-        %tmp.13 = getv function %tmp.12 :convertToFahrenheit;
-        %tmp.14 = lgetv %conditions.1;
-        %tmp.15 = getv %tmp.14 :highTemperature;
-        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
-        lputv %highTemp.3 %tmp.16;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 43 8 ]
-        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_stop" ]
-        %lowTemp.4 = local;
-        %tmp.18 = getv ? :CommonMethods;
-        %tmp.19 = getv function %tmp.18 :convertToFahrenheit;
-        %tmp.20 = lgetv %conditions.1;
-        %tmp.21 = getv %tmp.20 :lowTemperature;
-        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
-        lputv %lowTemp.4 %tmp.22;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 45 8 ]
-        %tmp.24 = getv ? :CommonMethods;
-        %tmp.25 = getv function %tmp.24 :setDrawingClip;
-        %tmp.27 = lgetv %dc;
-        %tmp.29 = getv ? :_weatherPoints;
-        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+        %tmp.16 = getv ? :CommonMethods;
+        %tmp.17 = getv function %tmp.16 :convertToFahrenheit;
+        %tmp.18 = lgetv %conditions.1;
+        %tmp.19 = getv %tmp.18 :highTemperature;
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
+        %tmp.21 = getv function %tmp.20 :toString;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = "°";
+        %tmp.24 = add %tmp.22 %tmp.23;
+        lputv %highTemp.3 %tmp.24;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 47 8 ]
-        %tmp.31 = getv ? :ThemeController;
-        %tmp.32 = getv function %tmp.31 :setColor;
-        %tmp.34 = lgetv %dc;
-        %tmp.36 = getv ? :ThemeController;
-        %tmp.37 = getv %tmp.36 :FONT_COLOR;
-        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.37);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 50 8 ]
-        %tmp.38 = lgetv %dc;
-        %tmp.39 = getv function %tmp.38 :drawText;
-        %tmp.41 = getv ? :_weatherX;
-        %tmp.42 = 24;
-        %tmp.43 = add %tmp.41 %tmp.42;
-        %tmp.45 = getv ? :_weatherY;
-        %tmp.46 = 10;
-        %tmp.47 = add %tmp.45 %tmp.46;
-        %tmp.48 = getm $.Toybox.Graphics;
-        %tmp.49 = getv %tmp.48 :FONT_MEDIUM;
-        %tmp.51 = lgetv %currentTemp.2;
-        %tmp.52 = getm $.Toybox.Graphics;
-        %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.38 %tmp.39(%tmp.43, %tmp.47, %tmp.49, %tmp.51, %tmp.53);
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_stop" ]
+        %lowTemp.4 = local;
+        %tmp.26 = getv ? :CommonMethods;
+        %tmp.27 = getv function %tmp.26 :convertToFahrenheit;
+        %tmp.28 = lgetv %conditions.1;
+        %tmp.29 = getv %tmp.28 :lowTemperature;
+        %tmp.30 = invoke %tmp.26 %tmp.27(%tmp.29);
+        %tmp.31 = getv function %tmp.30 :toString;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = "°";
+        %tmp.34 = add %tmp.32 %tmp.33;
+        lputv %lowTemp.4 %tmp.34;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 49 8 ]
+        %tmp.36 = getv ? :CommonMethods;
+        %tmp.37 = getv function %tmp.36 :setDrawingClip;
+        %tmp.39 = lgetv %dc;
+        %tmp.41 = getv ? :_weatherPoints;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 51 8 ]
-        %tmp.54 = lgetv %dc;
-        %tmp.55 = getv function %tmp.54 :drawText;
-        %tmp.57 = getv ? :_weatherX;
-        %tmp.58 = 108;
-        %tmp.59 = add %tmp.57 %tmp.58;
-        %tmp.61 = getv ? :_weatherY;
-        %tmp.62 = 4;
-        %tmp.63 = add %tmp.61 %tmp.62;
-        %tmp.65 = getv ? :_tinyFont;
-        %tmp.67 = lgetv %highTemp.3;
-        %tmp.68 = getm $.Toybox.Graphics;
-        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.54 %tmp.55(%tmp.59, %tmp.63, %tmp.65, %tmp.67, %tmp.69);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 52 8 ]
-        %tmp.70 = lgetv %dc;
-        %tmp.71 = getv function %tmp.70 :drawText;
-        %tmp.73 = getv ? :_weatherX;
-        %tmp.74 = 108;
-        %tmp.75 = add %tmp.73 %tmp.74;
-        %tmp.77 = getv ? :_weatherY;
-        %tmp.78 = 36;
-        %tmp.79 = add %tmp.77 %tmp.78;
-        %tmp.81 = getv ? :_tinyFont;
-        %tmp.83 = lgetv %lowTemp.4;
-        %tmp.84 = getm $.Toybox.Graphics;
-        %tmp.85 = getv %tmp.84 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.70 %tmp.71(%tmp.75, %tmp.79, %tmp.81, %tmp.83, %tmp.85);
+        %tmp.43 = getv ? :ThemeController;
+        %tmp.44 = getv function %tmp.43 :setColor;
+        %tmp.46 = lgetv %dc;
+        %tmp.48 = getv ? :ThemeController;
+        %tmp.49 = getv %tmp.48 :FONT_COLOR;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.49);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 54 8 ]
-        %tmp.87 = getv ? :CommonMethods;
-        %tmp.88 = getv function %tmp.87 :clearDrawingClip;
-        %tmp.90 = lgetv %dc;
-        invoke %tmp.87 %tmp.88(%tmp.90);
+        %tmp.50 = lgetv %dc;
+        %tmp.51 = getv function %tmp.50 :drawText;
+        %tmp.53 = getv ? :_weatherX;
+        %tmp.54 = 30;
+        %tmp.55 = add %tmp.53 %tmp.54;
+        %tmp.57 = getv ? :_weatherY;
+        %tmp.58 = 14;
+        %tmp.59 = add %tmp.57 %tmp.58;
+        %tmp.60 = getm $.Toybox.Graphics;
+        %tmp.61 = getv %tmp.60 :FONT_TINY;
+        %tmp.63 = lgetv %currentTemp.2;
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.50 %tmp.51(%tmp.55, %tmp.59, %tmp.61, %tmp.63, %tmp.65);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 55 8 ]
+        %tmp.66 = lgetv %dc;
+        %tmp.67 = getv function %tmp.66 :drawText;
+        %tmp.69 = getv ? :_weatherX;
+        %tmp.70 = 118;
+        %tmp.71 = add %tmp.69 %tmp.70;
+        %tmp.73 = getv ? :_weatherY;
+        %tmp.74 = 4;
+        %tmp.75 = add %tmp.73 %tmp.74;
+        %tmp.77 = getv ? :_veryTinyFont;
+        %tmp.79 = lgetv %highTemp.3;
+        %tmp.80 = getm $.Toybox.Graphics;
+        %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.66 %tmp.67(%tmp.71, %tmp.75, %tmp.77, %tmp.79, %tmp.81);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 56 8 ]
-        %tmp.91 = getm $.ThemeController;
-        %tmp.92 = getv function %tmp.91 :resetColors;
-        %tmp.94 = lgetv %dc;
-        invoke %tmp.91 %tmp.92(%tmp.94);
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_37_4_57_4_stop:
+        %tmp.82 = lgetv %dc;
+        %tmp.83 = getv function %tmp.82 :drawText;
+        %tmp.85 = getv ? :_weatherX;
+        %tmp.86 = 118;
+        %tmp.87 = add %tmp.85 %tmp.86;
+        %tmp.89 = getv ? :_weatherY;
+        %tmp.90 = 34;
+        %tmp.91 = add %tmp.89 %tmp.90;
+        %tmp.93 = getv ? :_veryTinyFont;
+        %tmp.95 = lgetv %lowTemp.4;
+        %tmp.96 = getm $.Toybox.Graphics;
+        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.82 %tmp.83(%tmp.87, %tmp.91, %tmp.93, %tmp.95, %tmp.97);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 59 8 ]
+        %tmp.98 = lgetv %dc;
+        %tmp.99 = getv function %tmp.98 :drawLine;
+        %tmp.101 = getv ? :_weatherX;
+        %tmp.102 = 96;
+        %tmp.103 = add %tmp.101 %tmp.102;
+        %tmp.105 = getv ? :_weatherY;
+        %tmp.106 = 35;
+        %tmp.107 = add %tmp.105 %tmp.106;
+        %tmp.109 = getv ? :_weatherX;
+        %tmp.110 = 132;
+        %tmp.111 = add %tmp.109 %tmp.110;
+        %tmp.113 = getv ? :_weatherY;
+        %tmp.114 = 35;
+        %tmp.115 = add %tmp.113 %tmp.114;
+        invoke %tmp.98 %tmp.99(%tmp.103, %tmp.107, %tmp.111, %tmp.115);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 62 8 ]
+        %tmp.116 = lgetv %dc;
+        %tmp.117 = getv function %tmp.116 :drawBitmap;
+        %tmp.119 = getv ? :_weatherX;
+        %tmp.120 = 56;
+        %tmp.121 = add %tmp.119 %tmp.120;
+        %tmp.123 = getv ? :_weatherY;
+        %tmp.124 = 20;
+        %tmp.125 = add %tmp.123 %tmp.124;
+        %tmp.127 = getv ? :_weatherIcon;
+        invoke %tmp.116 %tmp.117(%tmp.121, %tmp.125, %tmp.127);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 64 8 ]
+        %tmp.129 = getv ? :CommonMethods;
+        %tmp.130 = getv function %tmp.129 :clearDrawingClip;
+        %tmp.132 = lgetv %dc;
+        invoke %tmp.129 %tmp.130(%tmp.132);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 66 8 ]
+        %tmp.133 = getm $.ThemeController;
+        %tmp.134 = getv function %tmp.133 :resetColors;
+        %tmp.136 = lgetv %dc;
+        invoke %tmp.133 %tmp.134(%tmp.136);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_41_4_67_4_stop:
     }
 }
 [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc"; @line = 1; ]
