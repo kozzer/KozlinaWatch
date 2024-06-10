@@ -162,4 +162,25 @@
         </palette>
     </bitmap>
 
+    <bitmap id="dust_32" filename="drawables/weather/dust_32.png">
+        <palette>
+            <color>FFA62E</color>
+            <color>F28211</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="tornado_32" filename="drawables/weather/tornado_32.png">
+        <palette>
+            <color>2583EF</color>
+            <color>36C8F6</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="drizzle_32" filename="drawables/weather/drizzle_32.png">
+        <palette>
+            <color>2583EF</color>
+            <color>A2E4F4</color>
+        </palette>
+    </bitmap>
+
 </resources>
