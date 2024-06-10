@@ -26,6 +26,12 @@ module Rez {
         (:initialized) var sleet_32 as ResourceId;
         (:initialized) var mostly_cloudy_32 as ResourceId;
         (:initialized) var rain_cloud_32 as ResourceId;
+        (:initialized) var dust_32 as ResourceId;
+        (:initialized) var tornado_32 as ResourceId;
+        (:initialized) var drizzle_32 as ResourceId;
+        (:initialized) var night_clear_32 as ResourceId;
+        (:initialized) var night_partly_cloudy_32 as ResourceId;
+        (:initialized) var night_cloudy_32 as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 

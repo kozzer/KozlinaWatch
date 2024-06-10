@@ -80,7 +80,11 @@ class DigitalClock {
 
     private function getTimeString(greg){
              
-        var hourString = greg.hour.format("%1d");
+        var hour = greg.hour;
+        if (hour > 12){
+            hour = hour - 12;
+        }
+        var hourString = hour.format("%1d");
         var minString  = greg.min.format("%02d");
         var timeStr    = hourString + ":" + minString;
 

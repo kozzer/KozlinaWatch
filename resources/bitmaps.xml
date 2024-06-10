@@ -183,4 +183,25 @@
         </palette>
     </bitmap>
 
+    <bitmap id="night_clear_32" filename="drawables/weather/night_clear_32.png">
+        <palette>
+            <color>BB9CFF</color>
+            <color>8852FF</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="night_partly_cloudy_32" filename="drawables/weather/night_partly_cloudy_32.png">
+        <palette>
+            <color>BB9CFF</color>
+            <color>8852FF</color>
+            <color>6A2EFF</color>
+        </palette>
+    </bitmap>
+
+    <bitmap id="night_cloudy_32" filename="drawables/weather/night_cloudy_32.png">
+        <palette>
+            <color>6A2EFF</color>
+        </palette>
+    </bitmap>
+
 </resources>
