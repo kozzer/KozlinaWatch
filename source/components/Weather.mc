@@ -133,6 +133,7 @@ class Weather {
                     rez = Rez.Drawables.scattered_thunderstorms_32; 
                     break;
                 case Weather.CONDITION_LIGHT_RAIN: 
+                case Weather.CONDITION_LIGHT_SHOWERS: 
                     rez = Rez.Drawables.light_rain_32; 
                     break;
                 case Weather.CONDITION_HEAVY_RAIN: 
@@ -140,7 +141,6 @@ class Weather {
                     rez = Rez.Drawables.heavy_rain_32; 
                     break;
                 case Weather.CONDITION_LIGHT_SNOW: 
-                case Weather.CONDITION_LIGHT_SHOWERS: 
                 case Weather.CONDITION_CHANCE_OF_SNOW: 
                 case Weather.CONDITION_CLOUDY_CHANCE_OF_SNOW: 
                 case Weather.CONDITION_FLURRIES: 

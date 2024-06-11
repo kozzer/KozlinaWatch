@@ -504,35 +504,35 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_85_12_1
         %tmp.142 = getv %tmp.141 :CONDITION_LIGHT_RAIN;
         %tmp.143 = getv function %tmp.140 :equals;
         %tmp.144 = invoke %tmp.140 %tmp.143 (%tmp.142);
-        bt %tmp.144 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_135_16_137_25_switchCase;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 138 16 ]
+        bt %tmp.144 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_135_16_135_49_switchCase;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 136 16 ]
         %tmp.145 = dup %tmp.14;
         %tmp.146 = getm $.Toybox.Weather;
-        %tmp.147 = getv %tmp.146 :CONDITION_HEAVY_RAIN;
+        %tmp.147 = getv %tmp.146 :CONDITION_LIGHT_SHOWERS;
         %tmp.148 = getv function %tmp.145 :equals;
         %tmp.149 = invoke %tmp.145 %tmp.148 (%tmp.147);
-        bt %tmp.149 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_138_16_138_49_switchCase;
+        bt %tmp.149 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_136_16_138_25_switchCase;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 139 16 ]
         %tmp.150 = dup %tmp.14;
         %tmp.151 = getm $.Toybox.Weather;
-        %tmp.152 = getv %tmp.151 :CONDITION_HEAVY_SHOWERS;
+        %tmp.152 = getv %tmp.151 :CONDITION_HEAVY_RAIN;
         %tmp.153 = getv function %tmp.150 :equals;
         %tmp.154 = invoke %tmp.150 %tmp.153 (%tmp.152);
-        bt %tmp.154 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_139_16_141_25_switchCase;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 142 16 ]
+        bt %tmp.154 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_139_16_139_49_switchCase;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 140 16 ]
         %tmp.155 = dup %tmp.14;
         %tmp.156 = getm $.Toybox.Weather;
-        %tmp.157 = getv %tmp.156 :CONDITION_LIGHT_SNOW;
+        %tmp.157 = getv %tmp.156 :CONDITION_HEAVY_SHOWERS;
         %tmp.158 = getv function %tmp.155 :equals;
         %tmp.159 = invoke %tmp.155 %tmp.158 (%tmp.157);
-        bt %tmp.159 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_142_16_142_49_switchCase;
+        bt %tmp.159 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_140_16_142_25_switchCase;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 143 16 ]
         %tmp.160 = dup %tmp.14;
         %tmp.161 = getm $.Toybox.Weather;
-        %tmp.162 = getv %tmp.161 :CONDITION_LIGHT_SHOWERS;
+        %tmp.162 = getv %tmp.161 :CONDITION_LIGHT_SNOW;
         %tmp.163 = getv function %tmp.160 :equals;
         %tmp.164 = invoke %tmp.160 %tmp.163 (%tmp.162);
-        bt %tmp.164 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_143_16_143_52_switchCase;
+        bt %tmp.164 @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_143_16_143_49_switchCase;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 144 16 ]
         %tmp.165 = dup %tmp.14;
         %tmp.166 = getm $.Toybox.Weather;
@@ -806,25 +806,25 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_132_16_
         lputv %rez.1 %tmp.327;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 134 20 ]
         goto break @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_85_12_187_12_switchStmtEnd;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_135_16_137_25_switchCase:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 136 20 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_135_16_135_49_switchCase:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_136_16_138_25_switchCase:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 137 20 ]
         %tmp.329 = getv ? :Rez;
         %tmp.330 = getv %tmp.329 :Drawables;
         %tmp.331 = getv %tmp.330 :light_rain_32;
         lputv %rez.1 %tmp.331;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 137 20 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 138 20 ]
         goto break @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_85_12_187_12_switchStmtEnd;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_138_16_138_49_switchCase:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_139_16_141_25_switchCase:
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 140 20 ]
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_139_16_139_49_switchCase:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_140_16_142_25_switchCase:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 141 20 ]
         %tmp.333 = getv ? :Rez;
         %tmp.334 = getv %tmp.333 :Drawables;
         %tmp.335 = getv %tmp.334 :heavy_rain_32;
         lputv %rez.1 %tmp.335;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 141 20 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\Weather.mc" 142 20 ]
         goto break @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_85_12_187_12_switchStmtEnd;
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_142_16_142_49_switchCase:
-C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_143_16_143_52_switchCase:
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_143_16_143_49_switchCase:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_144_16_144_53_switchCase:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_145_16_145_60_switchCase:
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_Weather_mc_146_16_148_25_switchCase:
