@@ -16,7 +16,6 @@ class Weather {
     private var _weatherY;
 
     private var _weatherPoints;
-    private var _weatherIcon;
 
     function initialize(dc) {
         _screenWidth  = dc.getWidth();
@@ -33,9 +32,6 @@ class Weather {
                         [_weatherX + 144, _weatherY + _widgetHeight],
                         [_weatherX,       _weatherY + _widgetHeight]
                      ];
-
-        // Initialize weather icon
-        _weatherIcon = WatchUi.loadResource(Rez.Drawables.night_partly_cloudy_32);
     }
 
     function drawOnScreen(dc, info)
