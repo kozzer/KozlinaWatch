@@ -2,6 +2,7 @@ using Toybox.System;
 using Toybox.WatchUi;
 using Toybox.Weather as Weather;
 using Toybox.Graphics as Graphics;
+using Toybox.Lang;
 
 using ThemeController as Theme;
 
@@ -12,10 +13,10 @@ class Weather {
     private var _fontHeight;
     private var _widgetHeight;
 
-    private var _weatherX;
-    private var _weatherY;
+    private var _weatherX as Lang.Number;
+    private var _weatherY as Lang.Number;
 
-    private var _weatherPoints;
+    private var _weatherPoints as Lang.Array<Lang.Array<Lang.Number>>;
 
     function initialize(dc) {
         _screenWidth  = dc.getWidth();
@@ -34,10 +35,14 @@ class Weather {
                      ];
     }
 
-    function drawOnScreen(dc, info)
+    function drawOnScreen(dc)
     {
 
-        var conditions = info.Weather.getCurrentConditions();
+        var conditions = Weather.getCurrentConditions();
+
+
+        // ************
+        // If conditions object is used to draw anything, watchface crashes on the device :/
 
         // Draw current, high and low temps
         drawTemperatures(dc, conditions);

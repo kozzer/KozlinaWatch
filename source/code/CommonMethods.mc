@@ -25,7 +25,7 @@ module CommonMethods {
         dc.clearClip();
     
         // Update the cliping rectangle to polygon
-        _curClip        = getBoundingBox(rectanglePoints);
+        _curClip        = getBoundingBox(rectanglePoints) as Lang.Array<Lang.Array<Lang.Number>>;
         var bboxWidth  = _curClip[1][0] - _curClip[0][0] + 1;
         var bboxHeight = _curClip[1][1] - _curClip[0][1] + 1;
         

@@ -17,7 +17,8 @@ class BluetoothIcon {
 
         // Set location of points for icon location (upper right corner)
         _iconX      = dc.getWidth() / 2 - 12;
-        _iconY      = dc.getHeight() - 64;
+        //_iconY      = dc.getHeight() - 64;
+        _iconY      = 80;
         _iconPoints = [ 
                         [_iconX, _iconY], 
                         [_iconX + 24, _iconY], 
