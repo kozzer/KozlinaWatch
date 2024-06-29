@@ -77,16 +77,16 @@ module CommonMethods {
         CommonMethods.setDrawingClip(dc, rectanglePoints);
 
         // Colored outline rect
-        Theme.setColor(dc, color);
-        dc.fillRoundedRectangle(x - 60, y, 120, 40, 4);
+        //Theme.setColor(dc, color);
+        //dc.fillRoundedRectangle(x - 60, y, 120, 40, 4);
 
         // Black "fill" inside rect
-        Theme.setColor(dc, 0x000000);
-        dc.fillRoundedRectangle(x - 58, y + 2, 116, 36, 4);
+        //Theme.setColor(dc, 0x000000);
+        //dc.fillRoundedRectangle(x - 58, y + 2, 116, 36, 4);
 
         // Colored label text
         Theme.setColor(dc, color);
-        dc.drawText(x, y + 38, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(x, y + 28, Graphics.FONT_XTINY, label, Graphics.TEXT_JUSTIFY_CENTER);
 
         Theme.resetColors(dc);
         CommonMethods.clearDrawingClip(dc);

@@ -21,12 +21,10 @@ class KozlinaWatchView extends WatchUi.WatchFace
     var _digitalClock;
     var _dateTitle;                          // Reference to date in large font
     var _moveBar;                            // Reference to MoveBar object
-    //var _weather;                            // Reference to Weather object
     var _bluetoothIcon;                      // Reference to bluetooth icon when connected to phone
     var _stepsCount;                         // Reference to StepsCount object
     var _batteryStatus;                      // Reference to BatteryStatus object
-    var _caloriesBurned;                     // Reference to CaloriesBurned object
-    var _hrDisplay;                          // Reference to HeartRate object
+    var _heartRate;                          // Reference to HeartRate object
 
     // Initialize variables for this view
     function initialize() {
@@ -80,12 +78,10 @@ class KozlinaWatchView extends WatchUi.WatchFace
         _digitalClock   = new DigitalClock(dc);
         _dateTitle      = new DateTitle(dc);
         _moveBar        = new MoveBar(dc);
-        //_weather        = new Weather(dc);
         _bluetoothIcon  = new BluetoothIcon(dc);
         _stepsCount     = new StepsCount(dc);
         _batteryStatus  = new BatteryStatus(dc);
-        _caloriesBurned = new CaloriesBurned(dc);
-        _hrDisplay      = new HeartRate(dc);
+        _heartRate      = new HeartRate(dc);
     }
 
     function drawUIComponents(dc) {
@@ -99,15 +95,12 @@ class KozlinaWatchView extends WatchUi.WatchFace
             
             _dateTitle.drawOnScreen(dc);
             _moveBar.drawOnScreen(dc, activityInfo);
-            //_weather.drawOnScreen(dc);
 
             _bluetoothIcon.drawOnScreen(dc);
             _batteryStatus.drawOnScreen(dc);
 
             _stepsCount.drawOnScreen(dc, activityInfo);
-            _caloriesBurned.drawOnScreen(dc, activityInfo);
-
-            _hrDisplay.drawOnScreen(dc);
+            _heartRate.drawOnScreen(dc);
         }
 
         // Draw clock last so it's over everything else

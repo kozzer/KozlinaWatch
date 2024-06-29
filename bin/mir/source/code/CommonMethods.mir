@@ -342,71 +342,35 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_9
         %tmp.62 = lgetv %dc;
         %tmp.64 = lgetv %rectanglePoints.1;
         invoke %tmp.59 %tmp.60(%tmp.62, %tmp.64);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 80 8 ]
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 88 8 ]
         %tmp.65 = getm $.ThemeController;
         %tmp.66 = getv function %tmp.65 :setColor;
         %tmp.68 = lgetv %dc;
         %tmp.70 = lgetv %color;
         invoke %tmp.65 %tmp.66(%tmp.68, %tmp.70);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 81 8 ]
-        %tmp.71 = lgetv %dc;
-        %tmp.72 = getv function %tmp.71 :fillRoundedRectangle;
-        %tmp.74 = lgetv %x;
-        %tmp.75 = 60;
-        %tmp.76 = sub %tmp.74 %tmp.75;
-        %tmp.78 = lgetv %y;
-        %tmp.79 = 120;
-        %tmp.80 = 40;
-        %tmp.81 = 4;
-        invoke %tmp.71 %tmp.72(%tmp.76, %tmp.78, %tmp.79, %tmp.80, %tmp.81);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 84 8 ]
-        %tmp.82 = getm $.ThemeController;
-        %tmp.83 = getv function %tmp.82 :setColor;
-        %tmp.85 = lgetv %dc;
-        %tmp.86 = 0x000000;
-        invoke %tmp.82 %tmp.83(%tmp.85, %tmp.86);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 85 8 ]
-        %tmp.87 = lgetv %dc;
-        %tmp.88 = getv function %tmp.87 :fillRoundedRectangle;
-        %tmp.90 = lgetv %x;
-        %tmp.91 = 58;
-        %tmp.92 = sub %tmp.90 %tmp.91;
-        %tmp.94 = lgetv %y;
-        %tmp.95 = 2;
-        %tmp.96 = add %tmp.94 %tmp.95;
-        %tmp.97 = 116;
-        %tmp.98 = 36;
-        %tmp.99 = 4;
-        invoke %tmp.87 %tmp.88(%tmp.92, %tmp.96, %tmp.97, %tmp.98, %tmp.99);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 88 8 ]
-        %tmp.100 = getm $.ThemeController;
-        %tmp.101 = getv function %tmp.100 :setColor;
-        %tmp.103 = lgetv %dc;
-        %tmp.105 = lgetv %color;
-        invoke %tmp.100 %tmp.101(%tmp.103, %tmp.105);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 89 8 ]
-        %tmp.106 = lgetv %dc;
-        %tmp.107 = getv function %tmp.106 :drawText;
-        %tmp.109 = lgetv %x;
-        %tmp.111 = lgetv %y;
-        %tmp.112 = 38;
-        %tmp.113 = add %tmp.111 %tmp.112;
-        %tmp.114 = getm $.Toybox.Graphics;
-        %tmp.115 = getv %tmp.114 :FONT_XTINY;
-        %tmp.117 = lgetv %label;
-        %tmp.118 = getm $.Toybox.Graphics;
-        %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.106 %tmp.107(%tmp.109, %tmp.113, %tmp.115, %tmp.117, %tmp.119);
+        %tmp.71 = lgetv %dc;
+        %tmp.72 = getv function %tmp.71 :drawText;
+        %tmp.74 = lgetv %x;
+        %tmp.76 = lgetv %y;
+        %tmp.77 = 28;
+        %tmp.78 = add %tmp.76 %tmp.77;
+        %tmp.79 = getm $.Toybox.Graphics;
+        %tmp.80 = getv %tmp.79 :FONT_XTINY;
+        %tmp.82 = lgetv %label;
+        %tmp.83 = getm $.Toybox.Graphics;
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.71 %tmp.72(%tmp.74, %tmp.78, %tmp.80, %tmp.82, %tmp.84);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 91 8 ]
-        %tmp.120 = getm $.ThemeController;
-        %tmp.121 = getv function %tmp.120 :resetColors;
-        %tmp.123 = lgetv %dc;
-        invoke %tmp.120 %tmp.121(%tmp.123);
+        %tmp.85 = getm $.ThemeController;
+        %tmp.86 = getv function %tmp.85 :resetColors;
+        %tmp.88 = lgetv %dc;
+        invoke %tmp.85 %tmp.86(%tmp.88);
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc" 92 8 ]
-        %tmp.125 = getv ? :CommonMethods;
-        %tmp.126 = getv function %tmp.125 :clearDrawingClip;
-        %tmp.128 = lgetv %dc;
-        invoke %tmp.125 %tmp.126(%tmp.128);
+        %tmp.90 = getv ? :CommonMethods;
+        %tmp.91 = getv function %tmp.90 :clearDrawingClip;
+        %tmp.93 = lgetv %dc;
+        invoke %tmp.90 %tmp.91(%tmp.93);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_code_CommonMethods_mc_68_64_93_4_stop:
     }
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\code\CommonMethods.mc"; @line = 95; ]

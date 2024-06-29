@@ -21,8 +21,7 @@ class DigitalClock {
         _lightTimeFont  = Application.loadResource( Rez.Fonts.lemon_milk_light_144 );
 
         _timeX = (dc.getWidth() / 2) - 6;
-        //_timeY = (dc.getHeight() / 2) - 84;
-        _timeY = (dc.getHeight() / 2) - 90;
+        _timeY = (dc.getHeight() / 2) - 72;
 
         _timeHeight = Graphics.getFontHeight(_normalTimeFont) + 1;
         _timePoints = [

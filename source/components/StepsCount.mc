@@ -23,7 +23,7 @@ class StepsCount {
         _fontHeight   = Graphics.getFontHeight(_tinyFont);
 
         _stepsX = _screenWidth / 3;
-        _stepsY = _screenHeight - 140;
+        _stepsY = _screenHeight - 111;
         _stepsPoints = [
                         [_stepsX - 100, _stepsY],
                         [_stepsX + 100, _stepsY],
@@ -39,13 +39,11 @@ class StepsCount {
 
         var stepPerc   = ((info.steps * 100) / info.stepGoal).toNumber();
 
-        CommonMethods.drawLabelAndRecangle(dc, _stepsX, _stepsY, "steps", Theme.STEPS_COLOR);
-
         setStepsDisplayLevelColor(dc, stepPerc);
 
         CommonMethods.setDrawingClip(dc, _stepsPoints);
 
-        dc.drawText(_stepsX, _stepsY - 1, _tinyFont, stepsString, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(_stepsX, _stepsY, _tinyFont, stepsString, Graphics.TEXT_JUSTIFY_CENTER);
        
         Theme.resetColors(dc);
     }

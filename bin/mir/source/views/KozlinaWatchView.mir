@@ -41,10 +41,8 @@ class KozlinaWatchView extends WatchUi.WatchFace{
     var _stepsCount;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc"; @line = 27; @position = 8; ]
     var _batteryStatus;
-    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc"; @line = 28; @position = 8; ]
-    var _caloriesBurned;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc"; @line = 29; @position = 8; ]
-    var _hrDisplay;
+    var _heartRate;
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc"; @line = 32; ]
     function initialize() as Void {
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_32_26_38_4_start:
@@ -166,16 +164,11 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_78_
         %tmp.36 = lgetv %dc;
         %tmp.31 = newc %tmp.34 (%tmp.36);
         putv self :_batteryStatus %tmp.31;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 87 8 ]
-        %tmp.40 = getv ? :CaloriesBurned;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 88 8 ]
+        %tmp.40 = getv ? :HeartRate;
         %tmp.42 = lgetv %dc;
         %tmp.37 = newc %tmp.40 (%tmp.42);
-        putv self :_caloriesBurned %tmp.37;
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 88 8 ]
-        %tmp.46 = getv ? :HeartRate;
-        %tmp.48 = lgetv %dc;
-        %tmp.43 = newc %tmp.46 (%tmp.48);
-        putv self :_hrDisplay %tmp.43;
+        putv self :_heartRate %tmp.37;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_78_39_89_4_stop:
     }
     [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc"; @line = 91; ]
@@ -221,26 +214,20 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_95_
         %tmp.32 = lgetv %dc;
         %tmp.34 = lgetv %activityInfo.1;
         invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 108 12 ]
-        %tmp.36 = getv ? :_caloriesBurned;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 110 12 ]
+        %tmp.36 = getv ? :_heartRate;
         %tmp.37 = getv function %tmp.36 :drawOnScreen;
         %tmp.39 = lgetv %dc;
-        %tmp.41 = lgetv %activityInfo.1;
-        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
-[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 110 12 ]
-        %tmp.43 = getv ? :_hrDisplay;
-        %tmp.44 = getv function %tmp.43 :drawOnScreen;
-        %tmp.46 = lgetv %dc;
-        invoke %tmp.43 %tmp.44(%tmp.46);
+        invoke %tmp.36 %tmp.37(%tmp.39);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_95_21_111_8_stop:
         goto @C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_95_8_111_8_if_end;
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_95_8_111_8_if_end:
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\views\KozlinaWatchView.mc" 114 8 ]
-        %tmp.48 = getv ? :_digitalClock;
-        %tmp.49 = getv function %tmp.48 :drawOnScreen;
-        %tmp.51 = lgetv %dc;
-        %tmp.53 = getv ? :_isAwake;
-        invoke %tmp.48 %tmp.49(%tmp.51, %tmp.53);
+        %tmp.41 = getv ? :_digitalClock;
+        %tmp.42 = getv function %tmp.41 :drawOnScreen;
+        %tmp.44 = lgetv %dc;
+        %tmp.46 = getv ? :_isAwake;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
 C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_views_KozlinaWatchView_mc_91_34_115_4_stop:
     }
 }
