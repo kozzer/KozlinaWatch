@@ -25,6 +25,12 @@
         </palette>
     </bitmap>
 
+    <bitmap id="HeartRateIcon" filename="drawables/heart_48.png">
+        <palette>
+            <color>FF0707</color>
+        </palette>
+    </bitmap>
+
     <!-- Weather Icon -->
 
     <bitmap id="sunny_32" filename="drawables/weather/sunny_32.png">

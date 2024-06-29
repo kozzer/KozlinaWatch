@@ -26,6 +26,7 @@ class KozlinaWatchView extends WatchUi.WatchFace
     var _stepsCount;                         // Reference to StepsCount object
     var _batteryStatus;                      // Reference to BatteryStatus object
     var _caloriesBurned;                     // Reference to CaloriesBurned object
+    var _hrDisplay;                          // Reference to HeartRate object
 
     // Initialize variables for this view
     function initialize() {
@@ -84,6 +85,7 @@ class KozlinaWatchView extends WatchUi.WatchFace
         _stepsCount     = new StepsCount(dc);
         _batteryStatus  = new BatteryStatus(dc);
         _caloriesBurned = new CaloriesBurned(dc);
+        _hrDisplay      = new HeartRate(dc);
     }
 
     function drawUIComponents(dc) {
@@ -104,6 +106,8 @@ class KozlinaWatchView extends WatchUi.WatchFace
 
             _stepsCount.drawOnScreen(dc, activityInfo);
             _caloriesBurned.drawOnScreen(dc, activityInfo);
+
+            _hrDisplay.drawOnScreen(dc);
         }
 
         // Draw clock last so it's over everything else

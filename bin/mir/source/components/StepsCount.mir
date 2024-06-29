@@ -66,7 +66,7 @@ C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_StepsCount_mc_19_2
         putv self :_stepsX %tmp.17;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 26 8 ]
         %tmp.19 = getv ? :_screenHeight;
-        %tmp.20 = 136;
+        %tmp.20 = 140;
         %tmp.21 = sub %tmp.19 %tmp.20;
         putv self :_stepsY %tmp.21;
 [ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\StepsCount.mc" 27 8 ]

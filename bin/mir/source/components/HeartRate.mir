@@ -1,0 +1,204 @@
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 1; ]
+using Toybox.System;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 3; ]
+using Toybox.Graphics as :Graphics;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 5; ]
+using ThemeController as :Theme;
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 7; ]
+class HeartRate{
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 9; @position = 16; ]
+    private
+    var _screenWidth;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 10; @position = 16; ]
+    private
+    var _screenHeight;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 11; @position = 16; ]
+    private
+    var _hrFont;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 12; @position = 16; ]
+    private
+    var _fontHeight;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 14; @position = 16; ]
+    private
+    var _hrX;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 15; @position = 16; ]
+    private
+    var _hrY;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 17; @position = 16; ]
+    private
+    var _hrPoints;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 19; @position = 16; ]
+    private
+    var _hrIcon;
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 21; ]
+    function initialize(dc) as Void {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_21_28_39_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 22 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :_screenWidth %tmp.3;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 23 8 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :_screenHeight %tmp.6;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 24 8 ]
+        %tmp.7 = getm $.Toybox.Graphics;
+        %tmp.8 = getv %tmp.7 :FONT_XTINY;
+        putv self :_hrFont %tmp.8;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 25 8 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv function %tmp.9 :getFontHeight;
+        %tmp.12 = getv ? :_hrFont;
+        %tmp.13 = invoke %tmp.9 %tmp.10(%tmp.12);
+        putv self :_fontHeight %tmp.13;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 27 8 ]
+        %tmp.14 = getm $.Toybox.WatchUi;
+        %tmp.15 = getv function %tmp.14 :loadResource;
+        %tmp.17 = getv ? :Rez;
+        %tmp.18 = getv %tmp.17 :Drawables;
+        %tmp.19 = getv %tmp.18 :HeartRateIcon;
+        %tmp.20 = invoke %tmp.14 %tmp.15(%tmp.19);
+        putv self :_hrIcon %tmp.20;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 29 8 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :getWidth;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        putv self :_hrX %tmp.25;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 30 8 ]
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :getHeight;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = 72;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        putv self :_hrY %tmp.30;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 32 8 ]
+        %tmp.31 = newa 4;
+        %tmp.32 = newa 2;
+        %tmp.34 = getv ? :_hrX;
+        %tmp.35 = 16;
+        %tmp.36 = sub %tmp.34 %tmp.35;
+        %tmp.37 = dup %tmp.32;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.40 = getv ? :_hrY;
+        %tmp.41 = dup %tmp.38;
+        %tmp.42 = aputv %tmp.41 1 %tmp.40;
+        %tmp.43 = dup %tmp.31;
+        %tmp.44 = aputv %tmp.43 0 %tmp.42;
+        %tmp.45 = newa 2;
+        %tmp.47 = getv ? :_hrX;
+        %tmp.48 = 16;
+        %tmp.49 = add %tmp.47 %tmp.48;
+        %tmp.50 = dup %tmp.45;
+        %tmp.51 = aputv %tmp.50 0 %tmp.49;
+        %tmp.53 = getv ? :_hrY;
+        %tmp.54 = dup %tmp.51;
+        %tmp.55 = aputv %tmp.54 1 %tmp.53;
+        %tmp.56 = dup %tmp.44;
+        %tmp.57 = aputv %tmp.56 1 %tmp.55;
+        %tmp.58 = newa 2;
+        %tmp.60 = getv ? :_hrX;
+        %tmp.61 = 16;
+        %tmp.62 = add %tmp.60 %tmp.61;
+        %tmp.63 = dup %tmp.58;
+        %tmp.64 = aputv %tmp.63 0 %tmp.62;
+        %tmp.66 = getv ? :_hrY;
+        %tmp.68 = getv ? :_fontHeight;
+        %tmp.69 = add %tmp.66 %tmp.68;
+        %tmp.70 = dup %tmp.64;
+        %tmp.71 = aputv %tmp.70 1 %tmp.69;
+        %tmp.72 = dup %tmp.57;
+        %tmp.73 = aputv %tmp.72 2 %tmp.71;
+        %tmp.74 = newa 2;
+        %tmp.76 = getv ? :_hrX;
+        %tmp.77 = 16;
+        %tmp.78 = sub %tmp.76 %tmp.77;
+        %tmp.79 = dup %tmp.74;
+        %tmp.80 = aputv %tmp.79 0 %tmp.78;
+        %tmp.82 = getv ? :_hrY;
+        %tmp.84 = getv ? :_fontHeight;
+        %tmp.85 = add %tmp.82 %tmp.84;
+        %tmp.86 = dup %tmp.80;
+        %tmp.87 = aputv %tmp.86 1 %tmp.85;
+        %tmp.88 = dup %tmp.73;
+        %tmp.89 = aputv %tmp.88 3 %tmp.87;
+        putv self :_hrPoints %tmp.89;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 38 8 ]
+        %tmp.90 = getm $.ThemeController;
+        %tmp.91 = getv function %tmp.90 :resetColors;
+        %tmp.93 = lgetv %dc;
+        invoke %tmp.90 %tmp.91(%tmp.93);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_21_28_39_4_stop:
+    }
+    [ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 41; ]
+    function drawOnScreen(dc) {
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_start:
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 43 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_stop" ]
+        %hrHistory.1 = local;
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        %tmp.2 = getv function %tmp.1 :getHeartRateHistory;
+        %tmp.3 = null;
+        %tmp.4 = true;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+        lputv %hrHistory.1 %tmp.5;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 44 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_stop" ]
+        %hrSample.2 = local;
+        %tmp.6 = lgetv %hrHistory.1;
+        %tmp.7 = getv function %tmp.6 :next;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %hrSample.2 %tmp.8;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 45 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_stop" ]
+        %hr.3 = local;
+        %tmp.9 = lgetv %hrSample.2;
+        %tmp.10 = getv %tmp.9 :heartRate;
+        lputv %hr.3 %tmp.10;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 47 8 ]
+        [ "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_start" "C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_stop" ]
+        %hrString.4 = local;
+        %tmp.12 = getv ? :CommonMethods;
+        %tmp.13 = getv function %tmp.12 :getFormattedStringForNumber;
+        %tmp.15 = lgetv %hr.3;
+        %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
+        lputv %hrString.4 %tmp.16;
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 49 8 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :drawBitmap;
+        %tmp.20 = getv ? :_hrX;
+        %tmp.21 = 24;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        %tmp.24 = getv ? :_hrY;
+        %tmp.25 = 4;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        %tmp.28 = getv ? :_hrIcon;
+        invoke %tmp.17 %tmp.18(%tmp.22, %tmp.26, %tmp.28);
+[ "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc" 50 8 ]
+        %tmp.29 = lgetv %dc;
+        %tmp.30 = getv function %tmp.29 :drawText;
+        %tmp.32 = getv ? :_hrX;
+        %tmp.34 = getv ? :_hrY;
+        %tmp.36 = getv ? :_hrFont;
+        %tmp.38 = lgetv %hrString.4;
+        %tmp.39 = getm $.Toybox.Graphics;
+        %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34, %tmp.36, %tmp.38, %tmp.40);
+C_Users_David_ConnectIQ_kozzer_KozlinaWatch_source_components_HeartRate_mc_41_29_52_4_stop:
+    }
+}
+[ @file = "C:\Users\David\ConnectIQ\kozzer\KozlinaWatch\source\components\HeartRate.mc"; @line = 1; ]
+<init> {
+}
